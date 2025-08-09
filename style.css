@@ -85,8 +85,6 @@ footer{
   text-align: center;
 }
 
-/* ---------- Utility (optional) ---------- */
-
 a { color: var(--green); }
 a:hover { text-decoration: underline; }
 

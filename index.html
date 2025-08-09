@@ -59,6 +59,46 @@
       <p><strong>Happy building.</strong></p>
     </div>
   </section>
+
+  <section id="game-curiosities" class="section">
+    <h2>Game Curiosities From the Past.</h2>
+    <div class="content">
+    <p>
+      <strong>RPG Flags in a Single Byte</strong> —  
+      Back in the day, games squeezed every bit of memory. Literally.  
+      Instead of using separate variables for states like <em>is_poisoned</em>, <em>is_blessed</em>, or <em>has_potion</em>,  
+      they’d pack up to 8 on/off flags into a single byte using <em>bit manipulation</em>.  
+      Efficient, fast — and it made save files look like hieroglyphs.
+    </p>
+    <pre class="tm-codeblock"><code>
+# example handle_player_flags.c
+      
+#define POISONED   (1 &lt;&lt; 0)  // 00000001
+#define BLESSED    (1 &lt;&lt; 1)  // 00000010
+#define STUNNED    (1 &lt;&lt; 2)  // 00000100
+#define INVISIBLE  (1 &lt;&lt; 3)  // 00001000
+// ... up to bit 7
+
+unsigned char status = 0; // all flags off
+
+// Set a flag
+status |= POISONED;   // 00000001
+status |= INVISIBLE;  // 00001001
+
+// Clear a flag
+status &amp;= ~POISONED;  // clears poisoned
+
+// Check a flag
+if (status &amp; INVISIBLE) {
+    printf("Player is invisible!\n");
+}
+
+// Toggle a flag
+status ^= STUNNED; // flips stunned bit
+</code></pre>
+    </div>
+    
+  </section>
   
   <footer>© Terminal Minds</footer>
 </body>
