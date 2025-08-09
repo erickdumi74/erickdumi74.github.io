@@ -89,3 +89,15 @@ footer{
 
 a { color: var(--green); }
 a:hover { text-decoration: underline; }
+
+
+
+/* Terminal Minds utility: center a left‑aligned list inside centered blocks */
+.tm-inline-list {
+  display: inline-block;   /* lets it center inside text-align:center parents */
+  margin: 0 auto;          /* centers the inline-block box */
+  text-align: left;        /* left-align list content */
+  padding-left: 1.2rem;    /* bullet indent */
+}
+
+.tm-inline-list li { margin: 4px 0; }
