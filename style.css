@@ -90,8 +90,6 @@ footer{
 a { color: var(--green); }
 a:hover { text-decoration: underline; }
 
-
-
 /* Terminal Minds utility: center a left‑aligned list inside centered blocks */
 .tm-inline-list {
   display: inline-block;   /* lets it center inside text-align:center parents */
@@ -101,3 +99,10 @@ a:hover { text-decoration: underline; }
 }
 
 .tm-inline-list li { margin: 4px 0; }
+
+.tm-codeblock {
+  text-align: left;
+  overflow: auto;
+  margin: 0 auto;
+  max-width: 720px;
+}

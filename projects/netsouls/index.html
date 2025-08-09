@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Netsouls · Terminal Minds</title>
+  <link rel="icon" href="../../assets/favicon.png">
+  <link rel="icon" href="../../assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <header>
+    <a href="../../" class="logo-link"><img src="../../assets/logo_r.png" alt="Terminal Minds logo" class="logo"></a>
+    <h1>Netsouls</h1>
+    <p class="tag">ASCII roguelike · Souls‑flavored combat</p>
+    <nav>
+      <a href="../../">Home</a>
+      <a href="#about">About</a>
+      <a href="#play">Play</a>
+      <a href="#devlogs">Dev Logs</a>
+      <a href="#loresnapshot">Lore Snapshot</a>
+      <a href="#screenshots">Screen shots</a>
+      <a href="#contribute">Contribute</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2>About</h2>
+    <p><strong>Netsouls</strong> is a roguelike dungeon-crawler with a Soulslike heartbeat… and a potato for a hero.</p>
+
+    <p>You are <em>Sir Atarms</em>, the noble (and suspiciously starchy) defender of the Drawer Realm. Armed with whatever pointy stick, rusty cleaver, or bent shield you can find, you descend into the depths where fallen echoes whisper and enemies do not politely take turns.</p>
+
+    <p>There are no hunger timers here — only stamina, timing, and your own persistence. Death is part of the loop; every run teaches you more about your foes, your gear, and why on earth a potato is swinging an axe in the first place.</p>
+
+    <p>Built entirely in Python with ASCII graphics, Netsouls is fast to run, quick to restart, and endlessly replayable. It’s the kind of game that will make you say “one more run” until the sun comes up… or until you get mashed.</p>
+  
+    <p>Pattern‑driven combat in pure terminal. Directional attacks, rotating shields, stamina delay — tight and readable.</p>
+      
+  </section>
+
+  <section id="status" class="section">
+    <h2>Status</h2>
+    <p><strong>Current version:</strong> 0.142 · <strong>State:</strong> In development</p>
+      <ul class="tm-inline-list">
+        <li>Core loop running with live HUD and enemy death flow.</li>
+        <li>Entity‑based engine (player, enemies, shields/weapons/armor, items... all decoupled)</li>
+        <li>Combat mediator, stamina regen delay</li>
+        <li>Compressed HP bars for clean HUD</li>
+        <li>Real time HUD displaying user and nearby enemies.</li>
+        <li>Real time weapon/armor/shield switch withr real time stats update.</li>
+        <li>Player armor defenses taken into consideration during enemy attacks</li>
+        <li>Echo (currency) drop coupled to the player. No Bloodborne type enemies picking up your precious Echos.</li>
+        <li>Enemy/Player combat handled via mediator</li>
+        <li>Devlog entries available and <em>The Making of Netsouls</em> will land soon.</li>
+      </ul>
+  </section>
+
+  <section id="play" class="section">
+    <h2>Play (Sandbox) / Download</h2>
+      <p><strong>Repository:</strong>
+        <a href="#" target="_blank" rel="noopener">Add link when live</a>
+      </p>
+<pre class="tm-codeblock"><code>$ python --version   # 3.10+
+$ python main.py
+</code></pre>
+  </section>
+
+  <section id="devlogs" class="section">
+    <h2>Dev Logs</h2>
+    <div class="content">
+      <ul class="tm-inline-list">
+        <li>[WIP] Shield defense rotation logic (light/medium/heavy)</li>
+        <li>[WIP]: items gating by stats</li>
+        <li>[Planned]: enemies blink before attack</li>
+        <li>[Planned]: reduce nearby‑enemies HUD filter</li>
+        <li>[Planned]: add rooms</li>
+        <li>[Planned]: add npcs</li>
+        <li>[Planned]: add items</li>
+        <li>[Planned]: add dash</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="loresnapshot" class="section">
+    <h2>Lore Snapshot</h2>
+    <p>In the Starchborn Age, Echoes are the memory of the world — currency, power, and life itself. 
+    Sir Atarms, the Potato Knight, roams shifting realms where death is only a setback, but every return leaves a scar. 
+    Some seek the First Thread to master the Netsouls. He just seeks to endure.</p>
+  </section>
+
+  <section id="screenshots" class="section">
+    <h2>Screenshots</h2>
+    <p>ASCII captures and UI mockups will appear here after the first public build.</p>
+  </section>
+
+  <section id="contribute" class="section">
+    <h2>Contribute / Support</h2>
+    <p>Bug reports and ideas welcome in <a href="https://github.com/erickdumi74/erickdumi74.github.io/discussions" target="_blank" rel="noopener">Discussions</a>.</p>
+    <p>Like the work? Small boosts keep the lab humming. (Ko‑fi / PayPal links soon)</p>
+  </section>
+
+  <footer>© Terminal Minds</footer>
+</body>
+</html>
