@@ -5,8 +5,8 @@ A living portal for Python-based games, dev logs, and teaching-by-building.
 
 ## Projects
 - **Vellum** — narrative puzzle game (in progress)
-- **Terminal Decent** — fully playable
 - **Netsouls** — ASCII roguelike combat sandbox
+- **Terminal Decent** — fully playable
 
 ## Colors
 ```
