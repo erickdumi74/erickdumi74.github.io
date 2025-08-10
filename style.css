@@ -5,6 +5,9 @@
   --green:#2BBE88;
   --charcoal:#1A1B1E;
   --accent:#272A2B;
+  --logo-col: 150px;   /* fixed logo column width */
+  --header-gap: 24px;  /* space between logo and text */
+  --header-minh: 140px;/* consistent header height feel (tweak) */
 }
 
 /* Reset-ish */
@@ -30,12 +33,67 @@ header{
   text-align: center;      /* center the text in header only */
 }
 
-.logo { 
+/* Split header: logo left, title/tagline/nav right */
+/* Split header: fixed logo column + flexible text column */
+header.header--split{
+  display: grid;
+  grid-template-columns: var(--logo-col) 1fr; /* ← key line */
+  align-items: center;
+  column-gap: var(--header-gap);
+  max-width: 900px;
+  margin: 0 auto 10px;
+  text-align: center; /* default; can override in .header-text */
+  min-height: var(--header-minh); /* keeps header feeling consistent across pages */
+}
+
+header.header--split .logo{
+  width: var(--logo-col);
+  height: auto;
+  display: block;
+  margin: 0;          /* no accidental spacing */
+}
+
+header.header--split .header-text{
+  /* pick ONE of these, depending on the look you want */
+  /* A) centered text next to logo */
+  text-align: center;
+
+  /* B) or left‑aligned text next to logo */
+  /* text-align: left; */
+}
+
+header.header--split nav{
+  display: inline-flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center; /* use 'flex-start' if header-text is left-aligned */
+}
+
+/* Mobile: stack vertically but keep consistent logo size */
+@media (max-width: 720px){
+  header.header--split{
+    grid-template-columns: 1fr;
+    row-gap: 10px;            /* vertical spacing when stacked */
+    text-align: center;
+    min-height: auto;         /* let mobile breathe */
+  }
+  header.header--split .logo{
+    margin: 0 auto;           /* center logo above text */
+  }
+  header.header--split .header-text{
+    text-align: center;
+  }
+  header.header--split nav{
+    justify-content: center;
+  }
+}
+
+/*.logo { 
   width: 220px; 
   max-width: 60vw; 
   display: block; 
   margin: 0 auto 20px; 
-}
+}*/
 
 /* If your logo is wrapped in a link, give that <a> class="logo-link" */
 .logo-link { display: block; text-decoration: none; }
