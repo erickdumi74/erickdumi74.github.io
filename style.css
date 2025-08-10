@@ -65,10 +65,21 @@ header.header--split .header-text{
 }
 
 header.header--split nav{
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent dark strip */
   display: inline-flex;
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center; /* use 'flex-start' if header-text is left-aligned */
+}
+
+header.header--split nav a {
+  color: --green;                  /* make links a bit brighter */
+  text-decoration: none;           /* keep it clean */
+}
+
+header.header--split nav a:hover {
+  color: --green;                   /* brighter green on hover */
+  text-decoration: underline;       /* retro underline */
 }
 
 /* Mobile: stack vertically but keep consistent logo size */
