@@ -118,7 +118,7 @@ nav a:hover{ text-decoration: underline; }
 .section{
   max-width: 900px;
   margin: 40px auto;
-  padding: 0px 0px 30px 0px;
+  padding: 5px 0px 30px 0px;
   border: 1px solid var(--accent);
   border-radius: 12px;
   background: linear-gradient(180deg, rgba(18, 18, 19, 0.85), rgba(8, 8, 8, 0.85));
