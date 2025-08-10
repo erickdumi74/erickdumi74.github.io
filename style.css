@@ -16,11 +16,13 @@ html, body { margin: 0; padding: 0; }
 
 /* Base */
 body{
-  background: var(--bg);
+  /*background: var(--bg);*/
+  background-image: url('assets/bg.png');
   color: var(--fg);
   padding: 20px 30px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+
 
 /* ---------- Header (consistent on all pages) ---------- */
 
@@ -88,13 +90,6 @@ header.header--split nav{
   }
 }
 
-/*.logo { 
-  width: 220px; 
-  max-width: 60vw; 
-  display: block; 
-  margin: 0 auto 20px; 
-}*/
-
 /* If your logo is wrapped in a link, give that <a> class="logo-link" */
 .logo-link { display: block; text-decoration: none; }
 
@@ -119,7 +114,7 @@ nav a:hover{ text-decoration: underline; }
   padding: 15px 0px 30px 0px;
   border: 1px solid var(--accent);
   border-radius: 12px;
-  background: linear-gradient(180deg, rgba(39,42,43,.25), rgba(26,27,30,.25));
+  background: linear-gradient(180deg, rgba(18, 18, 19, 0.85), rgba(8, 8, 8, 0.85));
   text-align: center;    /* section heading centered */
 }
 
