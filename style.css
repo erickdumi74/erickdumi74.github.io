@@ -100,7 +100,7 @@ header.header--split nav a:hover {
   }
 
   .section{
-    --pad-right: 15px;
+    --pad-right: 25px;
     --pad-left:  25px;
   }
 }
