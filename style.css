@@ -86,6 +86,17 @@ nav a:hover{ text-decoration: underline; }
 .section .content-narrow ul { margin: 0; padding-left: 1.2rem; }
 .section .content-narrow li { margin: 4px 0; }
 
+.centered-list {
+  text-align: left;          /* aligns the bullet content itself */
+  display: inline-block;     /* allows centering within parent */
+  margin: 0 auto;            /* centers the list box itself */
+  padding-left: 1.2rem;      /* keeps bullet indent consistent */
+}
+
+.centered-list li {
+  margin: 4px 0;             /* same spacing as your other lists */
+}
+
 /* ---------- Footer ---------- */
 
 footer{
