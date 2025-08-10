@@ -128,6 +128,99 @@ $ python main.py
     </div>
   </section>
 
+  <section class="section" id="screenshots">
+    <h3>Screenshots</h3>
+    <div class="content-narrow">
+      <div class="gallery">
+        <!-- Thumbnail → opens in-page lightbox -->
+        
+        <figure class="shot">
+          <a class="shot__link" href="#shot-01">
+            <img src="../../assets/netsouls/screenshots/ns01_enemy.png"
+                alt="Hero meets enemy."
+                loading="lazy" width="960" height="540">
+          </a>
+          <figcaption class="shot__caption">Hero meets enemy.</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a class="shot__link" href="#shot-02">
+            <img src="../../assets/netsouls/screenshots/ns02_dead.png"
+                alt="Enemy kills hero."
+                loading="lazy" width="960" height="540">
+          </a>
+          <figcaption class="shot__caption">Enemy kills hero. Notice Echo drop.</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a class="shot__link" href="#shot-03">
+            <img src="../../assets/netsouls/screenshots/ns03_resurrected_sd.png"
+                alt="Resurrected."
+                loading="lazy" width="960" height="540">
+          </a>
+          <figcaption class="shot__caption">Resurrected.</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a class="shot__link" href="#shot-04">
+            <img src="../../assets/netsouls/screenshots/ns04_rt_action.png"
+                alt="Me against the world."
+                loading="lazy" width="960" height="540">
+          </a>
+          <figcaption class="shot__caption">Me against the world..</figcaption>
+        </figure>
+
+        <!-- add more figures as needed -->
+      </div>
+
+      <p class="tag tag--spaced">Tap/click to enlarge. Press <kbd>Esc</kbd> or tap outside to close.</p>
+    </div>
+
+    <!-- Lightboxes (one per image) -->
+     <div class="lightbox" id="shot-01" aria-modal="true" role="dialog">
+      <a class="lightbox__bg" href="#screenshots" aria-label="Close"></a>
+      <figure class="lightbox__figure">
+        <img src="../../assets/netsouls/screenshots/ns01_enemy.png" alt="Hero meets enemy.">
+        <figcaption>Hero meets enemy.</figcaption>
+        <a class="lightbox__close" href="#screenshots" aria-label="Close">×</a>
+        <a class="lightbox__next" href="#shot-02" aria-label="Next">›</a>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="shot-02" aria-modal="true" role="dialog">
+      <a class="lightbox__bg" href="#screenshots" aria-label="Close"></a>
+      <figure class="lightbox__figure">
+        <img src="../../assets/netsouls/screenshots/ns02_dead.png" alt="Enemy kills hero.">
+        <figcaption>Enemy kills hero.</figcaption>
+        <a class="lightbox__close" href="#screenshots" aria-label="Close">×</a>
+        <a class="lightbox__prev" href="#shot-01" aria-label="Previous">‹</a>
+        <a class="lightbox__next" href="#shot-03" aria-label="Next">›</a>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="shot-03" aria-modal="true" role="dialog">
+      <a class="lightbox__bg" href="#screenshots" aria-label="Close"></a>
+      <figure class="lightbox__figure">
+        <img src="../../assets/netsouls/screenshots/ns03_resurrected_sd.png" alt="Resurrected.">
+        <figcaption>Resurrected. Notice Echo drop.</figcaption>
+        <a class="lightbox__close" href="#screenshots" aria-label="Close">×</a>
+        <a class="lightbox__prev" href="#shot-02" aria-label="Previous">‹</a>
+        <a class="lightbox__next" href="#shot-04" aria-label="Next">›</a>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="shot-04" aria-modal="true" role="dialog">
+      <a class="lightbox__bg" href="#screenshots" aria-label="Close"></a>
+      <figure class="lightbox__figure">
+        <img src="../../assets/netsouls/screenshots/ns04_rt_action.png" alt="Me against the world.">
+        <figcaption>Me against the world.</figcaption>
+        <a class="lightbox__close" href="#screenshots" aria-label="Close">×</a>
+        <a class="lightbox__prev" href="#shot-03" aria-label="Previous">‹</a>
+      </figure>
+    </div>
+
+  </section>
+
   <section id="devlogs" class="section">
     <h2>Dev Logs</h2>
     <div class="content">
@@ -142,13 +235,6 @@ $ python main.py
         <li>[Planned]: add items</li>
         <li>[Planned]: add dash</li>
       </ul>
-    </div>
-  </section>
-
-  <section id="screenshots" class="section">
-    <div class="content-narrow">
-      <h2>Screenshots</h2>
-      <p>ASCII captures and UI mockups will appear here after the first public build.</p>
     </div>
   </section>
 
