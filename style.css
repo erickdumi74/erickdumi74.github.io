@@ -81,30 +81,6 @@ header.header--split nav a:hover {
   text-decoration: underline;       /* retro underline */
 }
 
-/* Mobile: stack vertically but keep consistent logo size */
-@media (max-width: 720px){
-  header.header--split{
-    grid-template-columns: 1fr;
-    row-gap: 10px;            /* vertical spacing when stacked */
-    text-align: center;
-    min-height: auto;         /* let mobile breathe */
-  }
-  header.header--split .logo{
-    margin: 0 auto;           /* center logo above text */
-  }
-  header.header--split .header-text{
-    text-align: center;
-  }
-  header.header--split nav{
-    justify-content: center;
-  }
-
-  .section{
-    --pad-right: 25px;
-    --pad-left:  25px;
-  }
-}
-
 /* If your logo is wrapped in a link, give that <a> class="logo-link" */
 .logo-link { display: block; text-decoration: none; }
 
@@ -192,4 +168,173 @@ a:hover { text-decoration: underline; }
   overflow: auto;
   margin: 0 auto;
   max-width: 600px;
+}
+
+
+/* ------------ Screenshots --------------- */
+
+/* —— In-page lightbox (no JS, uses :target) —— */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 1000;
+  background: rgba(0,0,0,0.86);
+  backdrop-filter: blur(2px);
+}
+.lightbox:target{ display: block; }
+
+/* Clickable backdrop to close */
+.lightbox__bg{
+  position: absolute; inset: 0;
+  display: block;
+}
+
+/* Centered figure card */
+.lightbox__figure{
+  position: relative;
+  z-index: 1;
+  margin: 6vh auto 0;
+  max-width: min(1200px, 96vw);
+  text-align: center;
+  background: linear-gradient(180deg, rgba(24,24,25,0.85), rgba(10,10,10,0.85));
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+/* Scales to viewport without distortion */
+.lightbox__figure img{
+  display: block;
+  max-width: 100%;
+  max-height: 76vh;
+  width: auto;
+  height: auto;
+  margin: 0 auto 8px;
+}
+
+/* Caption matches site vibe */
+.lightbox__figure figcaption{
+  color: var(--fg);
+  opacity: .9;
+  font-size: .95rem;
+}
+
+/* Close / prev / next controls */
+.lightbox__close,
+.lightbox__prev,
+.lightbox__next{
+  position: absolute;
+  top: 6px;
+  line-height: 1;
+  font-size: 28px;
+  text-decoration: none;
+  color: var(--white);
+  background: rgba(0,0,0,0.5);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+.lightbox__close{ right: 8px; }
+.lightbox__prev{ left: 8px; top: 50%; transform: translateY(-50%); }
+.lightbox__next{ right: 8px; top: 50%; transform: translateY(-50%); }
+
+.lightbox__close:hover,
+.lightbox__prev:hover,
+.lightbox__next:hover{
+  background: var(--charcoal);
+  color: var(--green);
+  text-decoration: none;
+}
+
+/* Optional: prevent page scroll when lightbox open (supported in modern browsers) */
+body:has(.lightbox:target){ overflow: hidden; }
+
+/* Responsive gallery grid */
+.gallery{
+  --tile-min: 180px;      /* minimum tile width */
+  --gap: 12px;
+  /*--pad-right: 0px;
+  --pad-left: 0px;*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--tile-min), 1fr));
+  gap: var(--gap);
+  margin-top: 10px;
+}
+
+.gallery img {
+  display: block;
+  max-width: 200px;    /* thumbnail width */
+  height: auto;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+}
+
+/* Shot card */
+.shot{
+  margin: 0;
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(24,24,25,.7), rgba(10,10,10,.7));
+}
+.shot__link{ display: block; }
+.shot img{
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;   /* consistent tiles */
+  object-fit: cover;
+}
+.shot__caption{
+  font-size: .95rem;
+  opacity: .9;
+  padding: 8px 10px 10px;
+}
+
+/* Mobile: stack vertically but keep consistent logo size */
+@media (max-width: 720px){
+  header.header--split{
+    grid-template-columns: 1fr;
+    row-gap: 10px;            /* vertical spacing when stacked */
+    text-align: center;
+    min-height: auto;         /* let mobile breathe */
+  }
+  header.header--split .logo{
+    margin: 0 auto;           /* center logo above text */
+  }
+  header.header--split .header-text{
+    text-align: center;
+  }
+  header.header--split nav{
+    justify-content: center;
+  }
+
+  .section{
+    --pad-right: 25px;
+    --pad-left:  25px;
+  }
+
+  .gallery{
+    --tile: 135px; /* pick your thumb width */
+    grid-template-columns: repeat(auto-fit, minmax(var(--tile), var(--tile)));
+    justify-content: center;   /* center leftover space */
+    gap: 10px;
+  }
+  .shot img{
+    width: 100%;   /* fill the 140px tile */
+    height: auto;
+  }
+
+  .lightbox__figure{ margin: 4vh auto 0; padding: 8px; }
+  .lightbox__figure img{ max-height: 70vh; }
+  .lightbox__close, .lightbox__prev, .lightbox__next{ font-size: 24px; padding: 6px 8px; }
+}
+
+/* Mobile/tablet tuning */
+@media (max-width: 900px){
+  .gallery{ --tile-min: 160px; --gap: 10px; }
+}
+@media (max-width: 600px){
+  .gallery{ --tile-min: 140px; }
 }
