@@ -86,19 +86,66 @@ $ python terminal_descent.py
 
   </section>
 
+  <section class="section" id="screenshots">
+    <h3>Screenshots</h3>
+    <div class="content-narrow">
+      <div class="gallery">
+        <!-- Thumbnail → opens in-page lightbox -->
+        
+        <figure class="shot">
+          <a class="shot__link" href="#shot-01">
+            <img src="../../assets/terminal-descent/screenshots/term01.png"
+                alt="Easy with low gravity."
+                loading="lazy" width="960" height="540">
+          </a>
+          <figcaption class="shot__caption">Easy with low gravity is just too easy...</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a class="shot__link" href="#shot-02">
+            <img src="../../assets/terminal-descent/screenshots/term02.png"
+                alt="Hard with hight gravity."
+                loading="lazy" width="960" height="540">
+          </a>
+          <figcaption class="shot__caption">...however hard with hight gravity is not!</figcaption>
+        </figure>
+
+        <!-- add more figures as needed -->
+      </div>
+
+      <p class="tag tag--spaced">Tap/click to enlarge. Press <kbd>Esc</kbd> or tap outside to close.</p>
+    </div>
+
+    <!-- Lightboxes (one per image) -->
+     <div class="lightbox" id="shot-01" aria-modal="true" role="dialog">
+      <a class="lightbox__bg" href="#screenshots" aria-label="Close"></a>
+      <figure class="lightbox__figure">
+        <img src="../../assets/terminal-descent/screenshots/term01.png" alt="Easy with low gravity.">
+        <figcaption>Easy with low gravity is just too easy....</figcaption>
+        <a class="lightbox__close" href="#screenshots" aria-label="Close">×</a>
+        <a class="lightbox__next" href="#shot-02" aria-label="Next">›</a>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="shot-02" aria-modal="true" role="dialog">
+      <a class="lightbox__bg" href="#screenshots" aria-label="Close"></a>
+      <figure class="lightbox__figure">
+        <img src="../../assets/terminal-descent/screenshots/term02.png" alt="Hard with high gravity.">
+        <figcaption>...however hard with hight gravity is not!</figcaption>
+        <a class="lightbox__close" href="#screenshots" aria-label="Close">×</a>
+        <a class="lightbox__prev" href="#shot-01" aria-label="Previous">‹</a>
+        <a class="lightbox__next" href="#shot-03" aria-label="Next">›</a>
+      </figure>
+    </div>
+
+  </section>
+
   <section id="devlogs" class="section">
     <h2>Dev Logs</h2>
     <div class="content">
       <ul class="tm-inline-list">
         <li>Nothing to do at the moment.</li>
       </ul>
-    </div>
-  </section>
-
-  <section id="screenshots" class="section">
-    <div class="content-narrow">
-      <h2>Screenshots</h2>
-      <p>ASCII captures and UI mockups will appear here after the first public build.</p>
     </div>
   </section>
 

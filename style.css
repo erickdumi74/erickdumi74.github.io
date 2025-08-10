@@ -255,23 +255,20 @@ a:hover { text-decoration: underline; }
 body:has(.lightbox:target){ overflow: hidden; }
 
 /* Responsive gallery grid */
-.gallery{
-  --tile-min: 180px;      /* minimum tile width */
-  --gap: 12px;
-  /*--pad-right: 0px;
-  --pad-left: 0px;*/
+#screenshots .gallery{
+  --tile: 150px; /* desktop thumb width */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--tile-min), 1fr));
-  gap: var(--gap);
-  margin-top: 10px;
+  grid-template-columns: repeat(auto-fit, var(--tile)); /* collapse empty columns */
+  justify-content: center;  /* center the whole row */
+  gap: 12px;
 }
 
-.gallery img {
+#screenshots .shot img{
   display: block;
-  max-width: 200px;    /* thumbnail width */
+  width: 100%;
   height: auto;
-  border: 1px solid var(--accent);
-  border-radius: 6px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 /* Shot card */
@@ -283,13 +280,7 @@ body:has(.lightbox:target){ overflow: hidden; }
   background: linear-gradient(180deg, rgba(24,24,25,.7), rgba(10,10,10,.7));
 }
 .shot__link{ display: block; }
-.shot img{
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;   /* consistent tiles */
-  object-fit: cover;
-}
+
 .shot__caption{
   font-size: .95rem;
   opacity: .9;
@@ -319,15 +310,19 @@ body:has(.lightbox:target){ overflow: hidden; }
     --pad-left:  25px;
   }
 
-  .gallery{
-    --tile: 135px; /* pick your thumb width */
-    grid-template-columns: repeat(auto-fit, minmax(var(--tile), var(--tile)));
-    justify-content: center;   /* center leftover space */
+  #screenshots .gallery{
+    --tile: 135px; /* you set this for Vellum */
+    grid-template-columns: repeat(auto-fill, var(--tile));
+    justify-content: center;
     gap: 10px;
   }
+
   .shot img{
-    width: 100%;   /* fill the 140px tile */
+    display: block;
+    width: 100%;                                 /* fill the fixed tile track */
     height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
   }
 
   .lightbox__figure{ margin: 4vh auto 0; padding: 8px; }
