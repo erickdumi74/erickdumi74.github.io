@@ -70,11 +70,7 @@ header.header--split nav{
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center; /* use 'flex-start' if header-text is left-aligned */
-}
-
-header.header--split nav a {
-  color: --green;                  /* make links a bit brighter */
-  text-decoration: none;           /* keep it clean */
+  padding: 10px;
 }
 
 header.header--split nav a:hover {
