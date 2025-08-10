@@ -15,7 +15,7 @@ html, body { margin: 0; padding: 0; }
 body{
   background: var(--bg);
   color: var(--fg);
-  padding: 56px 20px;
+  padding: 20px 30px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -58,7 +58,7 @@ nav a:hover{ text-decoration: underline; }
 .section{
   max-width: 900px;
   margin: 40px auto;
-  padding: 24px;
+  padding: 15px 0px 30px 0px;
   border: 1px solid var(--accent);
   border-radius: 12px;
   background: linear-gradient(180deg, rgba(39,42,43,.25), rgba(26,27,30,.25));
@@ -67,7 +67,7 @@ nav a:hover{ text-decoration: underline; }
 
 /* Inner content wrapper so p + ul align cleanly */
 .section .content{
-  max-width: 720px;
+  max-width: 600px;
   margin: 0 auto;
   text-align: left;      /* body text left-aligned */
 }
@@ -75,6 +75,16 @@ nav a:hover{ text-decoration: underline; }
 .section .content p{ margin: 0 0 12px; }
 .section .content ul{ margin: 0; padding-left: 1.2rem; }
 .section .content li{ margin: 4px 0; }
+
+.section .content-narrow {
+  max-width: 600px;   /* narrower than the original 720px */
+  margin: 0 auto;     /* center horizontally */
+  text-align: center; /* center-align text */
+}
+
+.section .content-narrow p { margin: 0 0 12px; }
+.section .content-narrow ul { margin: 0; padding-left: 1.2rem; }
+.section .content-narrow li { margin: 4px 0; }
 
 /* ---------- Footer ---------- */
 
