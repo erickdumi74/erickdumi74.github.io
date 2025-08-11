@@ -19,11 +19,13 @@ html, body { margin: 0; padding: 0; }
 
 /* Base */
 body{
-  /*background: var(--bg);*/
+  font-family: Arial, Helvetica, sans-serif;
   background-image: url('assets/bg.png');
   color: var(--fg);
   padding: 20px 30px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /*font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;*/
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  line-height: 1.5;           /* easier reading */
 }
 
 
@@ -86,6 +88,29 @@ header.header--split nav a:hover {
 
 /* Title / tagline */
 h1{ margin: 8px 0 6px; font-size: clamp(24px, 4vw, 40px); }
+
+h1, h2, h3,
+.shot__caption,
+code, kbd, pre,
+.tm-codeblock {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+               "Liberation Mono", "Courier New", monospace;
+  letter-spacing: 0.2px;
+}
+
+/* Code blocks keep their mono + spacing */
+.tm-codeblock code, pre code {
+  font-family: inherit;       /* inherits mono from parent */
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Utility: force mono on any element if you want the “terminal” look */
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+               "Liberation Mono", "Courier New", monospace !important;
+}
+
 p.tag{ opacity: .9; margin: 0 0 18px; }
 
 p.tag.tag--spaced {
