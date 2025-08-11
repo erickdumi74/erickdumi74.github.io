@@ -140,7 +140,7 @@ nav a:hover{ text-decoration: underline; }
 
 /* Inner content wrapper so p + ul align cleanly */
 .section .content{
-  max-width: 600px;
+  max-width: 720px;
   margin: 0 auto;
   text-align: left;      /* body text left-aligned */
 }
@@ -150,7 +150,7 @@ nav a:hover{ text-decoration: underline; }
 .section .content li{ margin: 4px 0; }
 
 .section .content-narrow {
-  max-width: 600px;   /* narrower than the original 720px */
+  max-width: 720px;   /* narrower than the original 720px */
   margin: 0 auto;     /* center horizontally */
   text-align: center; /* center-align text */
 }
