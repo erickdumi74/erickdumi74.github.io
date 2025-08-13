@@ -23,10 +23,29 @@
     about.appendChild(el);
   });
 
+  // Lore Snapshot
+  const lore_snapshot = document.getElementById('lore-snapshot');
+  if (game.loresnapshot) {
+    const p = document.createElement('p');
+    p.innerHTML = game.loresnapshot
+    lore_snapshot.appendChild(p)
+  }
+
+  // Status list
+  const status = document.getElementById('status-list');
+  (game.status || []).forEach(item => {
+    const li = document.createElement('li');
+    li.innerHTML = item;
+    status.appendChild(li);
+  });
+
   // How To Play
   const flavor = document.getElementById('howto-flavor');
+  const install_block = document.getElementById('install-block');
   if (game.howto) {
     flavor.innerHTML = `${game.howto.flavor}<br/>(<span class="mono">${game.howto.help}</span>)`;
+
+    install_block.textContent = game.howto.installblock;
 
     const wrap = document.getElementById('howto-sections');
     game.howto.sections.forEach(sec => {
@@ -107,11 +126,4 @@
     lightboxes.appendChild(box);
   });
 
-  // Status list
-  const status = document.getElementById('status-list');
-  (game.status || []).forEach(item => {
-    const li = document.createElement('li');
-    li.textContent = item;
-    status.appendChild(li);
-  });
 })();

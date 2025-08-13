@@ -6,11 +6,29 @@
       "repo": "https://github.com/erickdumi74/netsouls",
       "intro": [
         "<strong>Netsouls</strong> is a roguelike dungeon-crawler with a Soulslike heartbeat… and a potato for a hero.",
-        "You are Sir Atarms, the noble (and suspiciously starchy) defender of the Drawer Realm.",
-        "Built entirely in Python with ASCII graphics…"
+        "You are Sir Atarms, the noble (and suspiciously starchy) defender of the Drawer Realm. Armed with whatever pointy stick, rusty cleaver, or bent shield you can find, you descend into the depths where fallen echoes whisper and enemies do not politely take turns.",
+        "There are no hunger timers here — only stamina, timing, and your own persistence. Death is part of the loop; every run teaches you more about your foes, your gear, and why on earth a potato is swinging an axe in the first place.",
+        "Built entirely in Python with ASCII graphics, Netsouls is fast to run, quick to restart, and endlessly replayable. It’s the kind of game that will make you say “one more run” until the sun comes up… or until you get mashed.",
+        "Pattern‑driven combat in pure terminal. Directional attacks, rotating shields, stamina delay — tight and readable."
+      ],
+      "loresnapshot": [
+        "In the Starchborn Age, Echoes are the memory of the world — currency, power, and life itself. Sir Atarms, the Potato Knight, roams shifting realms where death is only a setback, but every return leaves a scar. Some seek the First Thread to master the Netsouls. He just seeks to endure."
+      ],
+      "status": [
+        "Core loop running with live HUD and enemy death flow.",
+        "Entity‑based engine (player, enemies, shields/weapons/armor, items... all decoupled)",
+        "Combat mediator, stamina regen delay",
+        "Compressed HP bars for clean HUD",
+        "Real time HUD displaying user and nearby enemies.",
+        "Real time weapon/armor/shield switch with real time stats update.",
+        "Player armor defenses taken into consideration during enemy attacks",
+        "Echo (currency) drop coupled to the player. No Bloodborne type enemies picking up your precious Echoes.",
+        "Enemy/Player combat handled via mediator.",
+        "Devlog entries available and <em>The Making of Netsouls</em> will land soon."
       ],
       "howto": {
         "flavor": "Keyboard‑only. Souls‑flavored timing. ASCII swagger.",
+        "installblock": "$ python --version   # 3.10+\n# if on Windows and it's your first time install curses\n$ python -m pip install windows-curses  \n$ python main.py",
         "help": "In‑game help: press ?.",
         "sections": [
           {"title":"Movement","items":[["i","Up"],["k","Down"],["j","Left"],["l","Right"]],"tag":"You can’t move into occupied tiles."},
@@ -30,12 +48,6 @@
         {"thumb":"../../assets/netsouls/screenshots/ns02_dead.png", "full":"../../assets/netsouls/screenshots/ns02_dead.png", "alt":"You died — Echoes dropped on the floor.", "caption":"One bad dodge. A pile of dropped Echoes. Lesson learned."},
         {"thumb":"../../assets/netsouls/screenshots/ns03_resurrected_sd.png", "full":"../../assets/netsouls/screenshots/ns03_resurrected_sd.png", "alt":"Resurrected — Echoes waiting to be recovered.", "caption":"Back from the void. Echoes still waiting."},
         {"thumb":"../../assets/netsouls/screenshots/ns04_rt_action.png", "full":"../../assets/netsouls/screenshots/ns04_rt_action.png", "alt":"Training ground chaos — blob swarm around the Dummy.", "caption":"Every blob in the realm, one indestructible Dummy… and me."}
-      ],
-      "status": [
-        "Core loop running with live HUD and enemy death flow.",
-        "Entity‑based engine (player, enemies, shields/weapons/armor, items... all decoupled)",
-        "Combat mediator, stamina regen delay",
-        "Compressed HP bars for clean HUD"
       ]
     },
 
