@@ -126,4 +126,12 @@
     lightboxes.appendChild(box);
   });
 
+  // Dev Logs
+  const log_items = document.getElementById('log-items');
+  (game.devlogs || []).forEach(item => {
+    const li = document.createElement('li');
+    li.innerHTML = item;
+    log_items.appendChild(li);
+  }) ;
+
 })();

@@ -48,6 +48,19 @@
         {"thumb":"../../assets/netsouls/screenshots/ns02_dead.png", "full":"../../assets/netsouls/screenshots/ns02_dead.png", "alt":"You died — Echoes dropped on the floor.", "caption":"One bad dodge. A pile of dropped Echoes. Lesson learned."},
         {"thumb":"../../assets/netsouls/screenshots/ns03_resurrected_sd.png", "full":"../../assets/netsouls/screenshots/ns03_resurrected_sd.png", "alt":"Resurrected — Echoes waiting to be recovered.", "caption":"Back from the void. Echoes still waiting."},
         {"thumb":"../../assets/netsouls/screenshots/ns04_rt_action.png", "full":"../../assets/netsouls/screenshots/ns04_rt_action.png", "alt":"Training ground chaos — blob swarm around the Dummy.", "caption":"Every blob in the realm, one indestructible Dummy… and me."}
+      ],
+      "devlogs": [
+        "[WIP]: windows curses validation",
+        "[WIP]: items gating by stats",
+        "[WIP]: shield defense rotation logic (light/medium/heavy)",
+        "[Planned]: double buffer to stop flickering on Linux",
+        "[Planned]: add health flask and upgrade concept (names to be determined)",
+        "[Planned]: enemies blink/color before attack",
+        "[Planned]: reduce nearby enemies HUD filter - too many enemies go out of screen",
+        "[Planned]: add dash",
+        "[Planned]: add rooms",
+        "[Planned]: add npcs",
+        "[Planned]: add items"
       ]
     },
 
