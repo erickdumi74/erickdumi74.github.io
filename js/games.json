@@ -1,0 +1,60 @@
+{
+  "games": {
+    "netsouls": {
+      "title": "Netsouls",
+      "tagline": "ASCII roguelike · Souls‑flavored combat",
+      "repo": "https://github.com/erickdumi74/netsouls",
+      "intro": [
+        "<strong>Netsouls</strong> is a roguelike dungeon-crawler with a Soulslike heartbeat… and a potato for a hero.",
+        "You are Sir Atarms, the noble (and suspiciously starchy) defender of the Drawer Realm.",
+        "Built entirely in Python with ASCII graphics…"
+      ],
+      "howto": {
+        "flavor": "Keyboard‑only. Souls‑flavored timing. ASCII swagger.",
+        "help": "In‑game help: press ?.",
+        "sections": [
+          {"title":"Movement","items":[["i","Up"],["k","Down"],["j","Left"],["l","Right"]],"tag":"You can’t move into occupied tiles."},
+          {"title":"Combat","items":[["e","Attack Up"],["d","Attack Down"],["s","Attack Left"],["f","Attack Right"]]},
+          {"title":"Shields","items":[["Space then e/d/s/f","raise/lower shield in that direction"]],"tag":"Press Space first to arm the shield, then a direction."},
+          {"title":"Gear Switching","items":[["r","Switch weapon"],["w","Switch shield"],["g","Switch armor"]],"tag":"You can switch gear mid‑fight."},
+          {"title":"Death & Respawn","items":[["Esc","Respawn (only when dead)"]]},
+          {"title":"Tips","bullets":[
+            "Stamina matters — attacks/defenses can delay regen.",
+            "Positioning beats face‑tanking. Watch enemy arcs.",
+            "Read the HUD; enemy cues are there for a reason."
+          ],"footer":"Bindings: i/k/j/l · e/d/s/f · Space+dir · r/w/g · Esc"}
+        ]
+      },
+      "screens": [
+        {"thumb":"../../assets/netsouls/screenshots/ns01_enemy.png", "full":"../../assets/netsouls/screenshots/ns01_enemy.png", "alt":"First encounter — Potato Knight meets a blob (HUD visible).", "caption":"First steps into the unknown… and something’s already watching."},
+        {"thumb":"../../assets/netsouls/screenshots/ns02_dead.png", "full":"../../assets/netsouls/screenshots/ns02_dead.png", "alt":"You died — Echoes dropped on the floor.", "caption":"One bad dodge. A pile of dropped Echoes. Lesson learned."},
+        {"thumb":"../../assets/netsouls/screenshots/ns03_resurrected_sd.png", "full":"../../assets/netsouls/screenshots/ns03_resurrected_sd.png", "alt":"Resurrected — Echoes waiting to be recovered.", "caption":"Back from the void. Echoes still waiting."},
+        {"thumb":"../../assets/netsouls/screenshots/ns04_rt_action.png", "full":"../../assets/netsouls/screenshots/ns04_rt_action.png", "alt":"Training ground chaos — blob swarm around the Dummy.", "caption":"Every blob in the realm, one indestructible Dummy… and me."}
+      ],
+      "status": [
+        "Core loop running with live HUD and enemy death flow.",
+        "Entity‑based engine (player, enemies, shields/weapons/armor, items... all decoupled)",
+        "Combat mediator, stamina regen delay",
+        "Compressed HP bars for clean HUD"
+      ]
+    },
+
+    "vellum": {
+      "title":"Vellum",
+      "tagline":"Gothic intrigue. Puzzles that whisper before they bite.",
+      "repo":"https://github.com/erickdumi74/vellum",
+      "howto": { "...": "same structure as above" },
+      "screens": [],
+      "status": []
+    },
+
+    "terminal-descent": {
+      "title":"Terminal Descent",
+      "tagline":"Precision thrust. Gravity with an attitude.",
+      "repo":"https://github.com/erickdumi74/terminal-descent",
+      "howto": { "...": "same structure as above (flight controls etc.)" },
+      "screens": [],
+      "status": []
+    }
+  }
+}
