@@ -134,4 +134,36 @@
     log_items.appendChild(li);
   }) ;
 
+  // Contribute / Support
+  const contributeWrap = document.getElementById('contribute-content');
+  if (contributeWrap && game.contribute) {
+    // paragraphs (allow inline HTML like <a>, <em>, <br/>)
+    (game.contribute.paragraphs || []).forEach(html => {
+      const p = document.createElement('p');
+      p.innerHTML = html;
+      contributeWrap.appendChild(p);
+    });
+
+    // optional links row (inline, dot‑separated)
+    if (game.contribute.links) {
+      const p = document.createElement('p');
+      p.className = 'tm-inline-links';
+      p.innerHTML = game.contribute.links.map(l => {
+        const label = l.label || l.href;
+        const rel = l.rel || 'noopener';
+        const target = l.target || '_blank';
+        const note = l.note ? ` <span class="tag">${l.note}</span>` : '';
+        return `<a href="${l.href}" target="${target}" rel="${rel}">${label}</a>${note}`;
+      }).join(' · ');
+      contributeWrap.appendChild(p);
+    }
+
+    // optional footer tag (keeps parity with howto footer)
+    if (game.contribute.footer) {
+      const p = document.createElement('p');
+      p.className = 'tag';
+      p.textContent = game.contribute.footer;
+      contributeWrap.appendChild(p);
+    }
+  }
 })();

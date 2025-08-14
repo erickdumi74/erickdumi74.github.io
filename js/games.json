@@ -61,7 +61,18 @@
         "[Planned]: add rooms",
         "[Planned]: add npcs",
         "[Planned]: add items"
-      ]
+      ],
+      "contribute": {
+        "paragraphs": [
+          "Bug reports and ideas welcome in <a href=\"https://github.com/erickdumi74/netsouls/discussions\" target=\"_blank\" rel=\"noopener\">Discussions</a>.",
+          "Like the work? Small boosts keep the lab humming."
+        ],
+        "links": [
+          { "label": "Ko‑fi", "href": "https://ko-fi.com/yourname", "note": "(soon)" },
+          { "label": "PayPal", "href": "https://paypal.me/yourname", "note": "(soon)" }
+        ],
+        "footer": "Thanks for keeping the lab great."
+      }
     },
 
     "vellum": {
