@@ -100,7 +100,7 @@
     const last = game.howto.sections[game.howto.sections.length - 1];
     if (last && last.footer) {
       const p = document.createElement('p');
-      p.className = 'tag';
+      p.className = 'tag tag--spaced';
       p.textContent = last.footer;
       wrap.appendChild(p);
     }

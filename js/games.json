@@ -47,7 +47,8 @@
             "Stamina matters — attacks/defenses can delay regen.",
             "Positioning beats face‑tanking. Watch enemy arcs.",
             "Read the HUD; enemy cues are there for a reason."
-          ],"footer":"Bindings: i/k/j/l · e/d/s/f · Space+dir · r/w/g · Esc"}
+          ],
+          "footer":"Bindings: i/k/j/l · e/d/s/f · Space+dir · r/w/g · Esc"}
         ]
       },
       "screens": [
@@ -79,7 +80,7 @@
           { "label": "Ko‑fi", "href": "https://ko-fi.com/yourname", "note": "(soon)" },
           { "label": "PayPal", "href": "https://paypal.me/yourname", "note": "(soon)" }
         ],
-        "footer": "Thanks for keeping the lab humming."
+        "footer": "Thanks for keeping the lab great."
       }
     },
 
@@ -135,7 +136,8 @@
             "Details matter — phrases, symbols, and wording may be important later.",
             "Progress is layered — items in one room often resolve puzzles elsewhere.",
             "The game nudges, but rarely tells — agency over autopilot."
-          ],"footer":"Core verbs: look · examine · take · inventory · use … on … · turn … left/right · enter … · type … · say … · save/load/delete · saves · help · credits · quit/exit"}
+          ],
+          "footer":"Core verbs: look · examine · take · inventory · use … on … · turn … left/right · enter … · type … · say … · save/load/delete · saves · help · credits · quit/exit"}
         ]
       },
       "screens": [
@@ -145,28 +147,23 @@
         {"thumb":"../../assets/netsouls/screenshots/ns04_rt_action.png", "full":"../../assets/netsouls/screenshots/ns04_rt_action.png", "alt":"Training ground chaos — blob swarm around the Dummy.", "caption":"Every blob in the realm, one indestructible Dummy… and me."}
       ],
       "devlogs": [
-        "[WIP]: windows curses validation",
-        "[WIP]: items gating by stats",
-        "[WIP]: shield defense rotation logic (light/medium/heavy)",
-        "[Planned]: double buffer to stop flickering on Linux",
-        "[Planned]: add health flask and upgrade concept (names to be determined)",
-        "[Planned]: enemies blink/color before attack",
-        "[Planned]: reduce nearby enemies HUD filter - too many enemies go out of screen",
-        "[Planned]: add dash",
-        "[Planned]: add rooms",
-        "[Planned]: add npcs",
-        "[Planned]: add items"
+        "[WIP] Object‑oriented refactor: items_data per room; alias resolver overhaul.",
+        "[WIP] Lore intensity: add more description to room items and interactions (take, poke, use, examine).",
+        "[WIP] Final puzzle design: final room mechanics, ethical fork, escape route, machine & lore integration.",
+        "[Planned] Structural refactor: Move each file to a directory for encapsulation and clarity.",
+        "[Planned] Public build notes and changelog snippets.",
+        "[Planned] Generate and upload terminal screen shots."
       ],
       "contribute": {
         "paragraphs": [
-          "Bug reports and ideas welcome in <a href=\"https://github.com/erickdumi74/netsouls/discussions\" target=\"_blank\" rel=\"noopener\">Discussions</a>.",
+          "Bug reports and ideas welcome in <a href=\"https://github.com/erickdumi74/vellum/discussions\" target=\"_blank\" rel=\"noopener\">Discussions</a>.",
           "Like the work? Small boosts keep the lab humming."
         ],
         "links": [
           { "label": "Ko‑fi", "href": "https://ko-fi.com/yourname", "note": "(soon)" },
           { "label": "PayPal", "href": "https://paypal.me/yourname", "note": "(soon)" }
         ],
-        "footer": "Thanks for keeping the lab humming."
+        "footer": "Thanks for keeping the lab great."
       }
     }
 
