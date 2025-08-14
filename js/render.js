@@ -17,11 +17,22 @@
 
   // About (supports multiple paragraphs)
   const about = document.getElementById('about-content');
-  (game.intro || []).forEach(p => {
-    const el = document.createElement('p');
-    el.innerHTML = p;
-    about.appendChild(el);
-  });
+  if (game.about) {
+    (game.about.intro || []).forEach(p => {
+      const el = document.createElement('p');
+      el.innerHTML = p;
+      about.appendChild(el);
+    });
+    if (game.about.items) {
+      const ul = document.createElement('ul');
+      (game.about.items || []).forEach(i => {
+        const li = document.createElement('li');
+        li.innerHTML = i;
+        ul.appendChild(li);
+      });
+      about.appendChild(ul);
+    }
+  }
 
   // Lore Snapshot
   const lore_snapshot = document.getElementById('lore-snapshot');
