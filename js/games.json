@@ -52,10 +52,10 @@
         ]
       },
       "screens": [
-        {"thumb":"../../assets/netsouls/screenshots/ns01_enemy.png", "full":"../../assets/netsouls/screenshots/ns01_enemy.png", "alt":"First encounter — Potato Knight meets a blob (HUD visible).", "caption":"First steps into the unknown… and something’s already watching."},
-        {"thumb":"../../assets/netsouls/screenshots/ns02_dead.png", "full":"../../assets/netsouls/screenshots/ns02_dead.png", "alt":"You died — Echoes dropped on the floor.", "caption":"One bad dodge. A pile of dropped Echoes. Lesson learned."},
-        {"thumb":"../../assets/netsouls/screenshots/ns03_resurrected_sd.png", "full":"../../assets/netsouls/screenshots/ns03_resurrected_sd.png", "alt":"Resurrected — Echoes waiting to be recovered.", "caption":"Back from the void. Echoes still waiting."},
-        {"thumb":"../../assets/netsouls/screenshots/ns04_rt_action.png", "full":"../../assets/netsouls/screenshots/ns04_rt_action.png", "alt":"Training ground chaos — blob swarm around the Dummy.", "caption":"Every blob in the realm, one indestructible Dummy… and me."}
+        {"image":"../../assets/netsouls/screenshots/ns01_enemy.png", "alt":"First encounter — Potato Knight meets a blob (HUD visible).", "caption":"First steps into the unknown… and something’s already watching."},
+        {"image":"../../assets/netsouls/screenshots/ns02_dead.png", "alt":"You died — Echoes dropped on the floor.", "caption":"One bad dodge. A pile of dropped Echoes. Lesson learned."},
+        {"image":"../../assets/netsouls/screenshots/ns03_resurrected_sd.png", "alt":"Resurrected — Echoes waiting to be recovered.", "caption":"Back from the void. Echoes still waiting."},
+        {"image":"../../assets/netsouls/screenshots/ns04_rt_action.png", "alt":"Training ground chaos — blob swarm around the Dummy.", "caption":"Every blob in the realm, one indestructible Dummy… and me."}
       ],
       "devlogs": [
         "[WIP]: windows curses validation",
@@ -141,10 +141,10 @@
         ]
       },
       "screens": [
-        {"thumb":"../../assets/netsouls/screenshots/ns01_enemy.png", "full":"../../assets/netsouls/screenshots/ns01_enemy.png", "alt":"First encounter — Potato Knight meets a blob (HUD visible).", "caption":"First steps into the unknown… and something’s already watching."},
-        {"thumb":"../../assets/netsouls/screenshots/ns02_dead.png", "full":"../../assets/netsouls/screenshots/ns02_dead.png", "alt":"You died — Echoes dropped on the floor.", "caption":"One bad dodge. A pile of dropped Echoes. Lesson learned."},
-        {"thumb":"../../assets/netsouls/screenshots/ns03_resurrected_sd.png", "full":"../../assets/netsouls/screenshots/ns03_resurrected_sd.png", "alt":"Resurrected — Echoes waiting to be recovered.", "caption":"Back from the void. Echoes still waiting."},
-        {"thumb":"../../assets/netsouls/screenshots/ns04_rt_action.png", "full":"../../assets/netsouls/screenshots/ns04_rt_action.png", "alt":"Training ground chaos — blob swarm around the Dummy.", "caption":"Every blob in the realm, one indestructible Dummy… and me."}
+        {"image":"../../assets/vellum/screenshots/vel01.png", "alt":"Study initial interactions.", "caption":"Study - early interactions."},
+        {"image":"../../assets/vellum/screenshots/vel02.png", "alt":"Hallway note only visible after examine plaque.", "caption":"Hallway - checking state logic. Note only visible after examine plaque."},
+        {"image":"../../assets/vellum/screenshots/vel03.png", "alt":"Secret Chamber mirror interaction loop.", "caption":"Secret Chamber - testing mirror interaction loop."},
+        {"image":"../../assets/vellum/screenshots/vel04.png", "alt":"Lab test prism activation.", "caption":"Lab - test prism activation."}
       ],
       "devlogs": [
         "[WIP] Object‑oriented refactor: items_data per room; alias resolver overhaul.",

@@ -118,7 +118,7 @@
     fig.className = 'shot';
     fig.innerHTML = `
       <a class="shot__link" href="#${id}" aria-label="Open screenshot ${i+1}">
-        <img src="${shot.thumb}" alt="${shot.alt}" loading="lazy">
+        <img src="${shot.image}" alt="${shot.alt}" loading="lazy">
       </a>
       <figcaption class="shot__caption">${shot.caption}</figcaption>`;
     gallery.appendChild(fig);
@@ -132,7 +132,7 @@
     box.innerHTML = `
       <a class="lightbox__bg" href="#screenshots" aria-label="Close"></a>
       <figure class="lightbox__figure">
-        <img src="${shot.full}" alt="${shot.alt}">
+        <img src="${shot.image}" alt="${shot.alt}">
         <figcaption>${shot.caption}</figcaption>
         <a class="lightbox__close" href="#screenshots" aria-label="Close">×</a>
         ${prev ? `<a class="lightbox__prev" href="${prev}" aria-label="Previous">‹</a>` : ''}
