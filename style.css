@@ -21,6 +21,7 @@ html, body { margin: 0; padding: 0; }
 body{
   font-family: Arial, Helvetica, sans-serif;
   background-image: url('assets/bg.png');
+  background-attachment: fixed;
   color: var(--fg);
   padding: 20px 30px;
   /*font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;*/
