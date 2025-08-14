@@ -160,6 +160,15 @@
   }
 })();
 
+requestAnimationFrame(() => {
+  const titleEl = document.getElementById('game-title');
+  const tagEl = document.getElementById('game-tagline');
+  const docTitle = document.getElementById('doc-title');
+
+  if (docTitle && game.title) docTitle.textContent = `${game.title} · Terminal Minds`;
+  if (titleEl && game.title) titleEl.textContent = game.title;
+  if (tagEl && game.tagline) tagEl.textContent = game.tagline;
+});
 
 function parseTags(text) {
   return text
