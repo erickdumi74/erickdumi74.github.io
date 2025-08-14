@@ -2,7 +2,7 @@
   const qsGame = new URLSearchParams(location.search).get('game');
   const attrGame = document.body.dataset.game;
   const gameId = qsGame || attrGame;
-  const res = await fetch('../js/games.json');  // adjust path if needed
+  const res = await fetch('../assets/data/games.json');  // adjust path if needed
 
   const data = await res.json();
   const game = data.games[gameId];

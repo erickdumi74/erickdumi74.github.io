@@ -109,7 +109,7 @@
         "installblock": "$ python --version   # 3.10+\n$ python game.py",
         "help": "In-game help: type help.",
         "sections": [
-          {"title":"Exploration","items":[["look or look around","Survey the room"],["examine <item>","study something closely (descriptions may evolve based on progress)"]]},
+          {"title":"Exploration","items":[["look or look around","survey the room"],["examine <item>","study something closely (descriptions may evolve based on progress)"]]},
           {"title":"Inventory","items":[["take <item>","pick up an item (if possible)"],["inventory ","list what you’re carrying"]]},
           {"title":"Interaction","items":[["use <item> on <target>","apply an item to something"],["turn <item> <direction> ","some objects turn left or right"],["enter <door or passage>","move through doors or passages"]]},
           {"title":"Input","items":[["type <code>","for keypads, consoles, or terminals"],["say <phrase>","certain locks respond to spoken words"]]},
@@ -179,47 +179,32 @@
         ]
       },
       "howto": {
-        "flavor": "Keyboard-only. Gothic intrigue. Puzzles that whisper before they bite.",
+        "flavor": "Keyboard-only. Precision thrust at 1 second intervals. Gravity with an attitude.",
         "installblock": "$ python --version   # 3.10+\n$ python game.py",
-        "help": "In-game help: type help.",
+        "help": "In-game help: you’re on your own.",
         "sections": [
-          {"title":"Exploration","items":[["look or look around","Survey the room"],["examine <item>","study something closely (descriptions may evolve based on progress)"]]},
-          {"title":"Inventory","items":[["take <item>","pick up an item (if possible)"],["inventory ","list what you’re carrying"]]},
-          {"title":"Interaction","items":[["use <item> on <target>","apply an item to something"],["turn <item> <direction> ","some objects turn left or right"],["enter <door or passage>","move through doors or passages"]]},
-          {"title":"Input","items":[["type <code>","for keypads, consoles, or terminals"],["say <phrase>","certain locks respond to spoken words"]]},
-          {
-            "title":"Game Management",
-            "items":[
-              ["save <slot>","save to slots 1–4"],
-              ["load <slot>","load from slots 1–4"],
-              ["delete <slot>","delete a save"],
-              ["help","list commands"],
-              ["credits","show credits"],
-              ["quit or exit","leave the game"]
-            ]
-          },
+          {"title":"Flight Controls","items":[["Enter a number","amount of thrust to apply this turn"],["q","quit mid-descent"]]},
+          {"title":"Objective","bullets":[
+            "Manage your fuel and thrust to counter gravity.",
+            "Touch down at a safe speed <strong>(<= 5 m/s)</strong>.",
+            "Run out of altitude at high speed and you’ll crater."
+          ]},
           {"title":"Tips","bullets":[
             "Examine often — clues can unlock only after related discoveries.",
-            "Details matter — phrases, symbols, and wording may be important later.",
-            "Progress is layered — items in one room often resolve puzzles elsewhere.",
-            "The game nudges, but rarely tells — agency over autopilot."
+            "Small thrust adjustments can be fun, but wastes precious fuel. Time bursts effectively.",
+            "Watch both speed and altitude — the ground comes quick at high speeds."
           ],
-          "footer":"Core verbs: look · examine · take · inventory · use … on … · turn … left/right · enter … · type … · say … · save/load/delete · saves · help · credits · quit/exit"}
+          "footer":"Core inputs: thrust number · q to quit"}
         ]
       },
       "screens": [
-        {"image":"../../assets/vellum/screenshots/vel01.png", "alt":"Study initial interactions.", "caption":"Study - early interactions."},
-        {"image":"../../assets/vellum/screenshots/vel02.png", "alt":"Hallway note only visible after examine plaque.", "caption":"Hallway - checking state logic. Note only visible after examine plaque."},
-        {"image":"../../assets/vellum/screenshots/vel03.png", "alt":"Secret Chamber mirror interaction loop.", "caption":"Secret Chamber - testing mirror interaction loop."},
-        {"image":"../../assets/vellum/screenshots/vel04.png", "alt":"Lab test prism activation.", "caption":"Lab - test prism activation."}
+        {"image":"../../assets/terminal-descent/screenshots/term01.png", "alt":"Easy with low gravity.", "caption":"Easy with low gravity is just too easy..."},
+        {"image":"../../assets/terminal-descent/screenshots/term02.png", "alt":"Hard with high gravity.", "caption":"...however hard with high gravity is not!"}
       ],
       "devlogs": [
-        "[WIP] Object‑oriented refactor: items_data per room; alias resolver overhaul.",
-        "[WIP] Lore intensity: add more description to room items and interactions (take, poke, use, examine).",
-        "[WIP] Final puzzle design: final room mechanics, ethical fork, escape route, machine & lore integration.",
-        "[Planned] Structural refactor: Move each file to a directory for encapsulation and clarity.",
-        "[Planned] Public build notes and changelog snippets.",
-        "[Planned] Generate and upload terminal screen shots."
+        "[Planned] Add more \"realistic\" physics. Currently Terminal Descent uses a simplified thrust model for gameplay purposes."
+
+        
       ],
       "contribute": {
         "discussion_link": "https://github.com/erickdumi74/terminal-descent/discussions"
