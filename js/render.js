@@ -36,10 +36,20 @@
 
   // Lore Snapshot
   const lore_snapshot = document.getElementById('lore-snapshot');
+  const lore_wrapper = document.getElementById('loresnapshot');
   if (game.loresnapshot) {
-    const p = document.createElement('p');
-    p.innerHTML = game.loresnapshot
-    lore_snapshot.appendChild(p)
+    if (game.loresnapshot.optional) {
+      lore_wrapper.className = 'section'; // makes it visible
+
+      const h2 = document.createElement('h2');
+      h2.innerHTML = 'Lore Snapshot';
+      lore_snapshot.appendChild(h2);
+
+      const p = document.createElement('p');
+      p.innerHTML = game.loresnapshot.text;
+      lore_snapshot.appendChild(p);
+    }
+    
   }
 
   // Status list

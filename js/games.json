@@ -12,11 +12,11 @@
           "Built entirely in Python with ASCII graphics, Netsouls is fast to run, quick to restart, and endlessly replayable. It’s the kind of game that will make you say “one more run” until the sun comes up… or until you get mashed.",
           "Pattern‑driven combat in pure terminal. Directional attacks, rotating shields, stamina delay — tight and readable."
         ]
-      }
-      ,
-      "loresnapshot": [
-        "In the Starchborn Age, Echoes are the memory of the world — currency, power, and life itself. Sir Atarms, the Potato Knight, roams shifting realms where death is only a setback, but every return leaves a scar. Some seek the First Thread to master the Netsouls. He just seeks to endure."
-      ],
+      },
+      "loresnapshot": {
+        "optional": true,
+        "text": "In the Starchborn Age, Echoes are the memory of the world — currency, power, and life itself. Sir Atarms, the Potato Knight, roams shifting realms where death is only a setback, but every return leaves a scar. Some seek the First Thread to master the Netsouls. He just seeks to endure."
+      },
       "status": {
         "version": "0.142",
         "state": "In development",
@@ -90,9 +90,10 @@
           "Narrative driven immersive story telling."
         ]
       },
-      "loresnapshot": [
-        "Dr. Alaric Vellum chased a geometry of power he could almost name. The manor remembers. The mirrors remember more."
-      ],
+      "loresnapshot": {
+        "optional": true,
+        "text": "Dr. Alaric Vellum chased a geometry of power he could almost name. The manor remembers. The mirrors remember more."
+      },
       "status": {
         "version": "0.60",
         "state": "In development",
@@ -152,30 +153,29 @@
     },
 
     "terminal-descent": {
-      "title": "Vellum",
-      "tagline": "Gothic terminal puzzle game · In progress",
-      "repo": "https://github.com/erickdumi74/vellum",
+      "title": "Terminal Descent",
+      "tagline": "Minimalist moon‑lander · Skill over luck",
+      "repo": "https://github.com/erickdumi74/terminal-descent",
       "about": {
         "intro": [
-          "Vellum is a narrative puzzle game with deep lore, modular verbs, and deliberate pacing. Built in Python to emphasize clarity and immersion."
+          "A tiny terminal lander: throttle, gravity, fuel. No fluff—just descent math and your nerves."
         ],
         "items": [
-          "Puzzle design paced for discovery, not timers.",
-          "Modular engine with verbs, items, and rooms encapsulated.",
-          "Narrative driven immersive story telling."
+          "Readable stats: altitude, vertical speed, fuel.",
+          "Difficulty presets (engine efficiency & gravity).",
+          "Win/Crash states with clean feedback.",
+          "Uses simplified physics, not a full simulator — do not attempt real landings with this or pilots will die!"
         ]
       },
-      "loresnapshot": [
-        "Dr. Alaric Vellum chased a geometry of power he could almost name. The manor remembers. The mirrors remember more."
-      ],
+      "loresnapshot": {
+        "optional": false,
+        "text": "Dr. Alaric Vellum chased a geometry of power he could almost name. The manor remembers. The mirrors remember more."
+      },
       "status": {
-        "version": "0.60",
-        "state": "In development",
+        "version": "1.0",
+        "state": "Playable prototype",
         "items": [
-          "Incomplete but playable version available for download. Missing final puzzle.",
-          "Verbs fully functional and modularized. Engines being called by the main game loop.",
-          "All puzzles states corrected and working.",
-          "Devlog entries available and <em>The Making of Vellum</em> will land soon."
+          "Complete game available for download."
         ]
       },
       "howto": {
@@ -222,10 +222,9 @@
         "[Planned] Generate and upload terminal screen shots."
       ],
       "contribute": {
-        "discussion_link": "https://github.com/erickdumi74/netsouls/discussions"
+        "discussion_link": "https://github.com/erickdumi74/terminal-descent/discussions"
       }
     }
-
   }
 }
 
