@@ -35,21 +35,16 @@
   }
 
   // Lore Snapshot
-  const lore_snapshot = document.getElementById('lore-snapshot');
   const lore_wrapper = document.getElementById('loresnapshot');
-  if (game.loresnapshot) {
-    if (game.loresnapshot.optional) {
-      lore_wrapper.className = 'section'; // makes it visible
-
-      const h2 = document.createElement('h2');
-      h2.innerHTML = 'Lore Snapshot';
-      lore_snapshot.appendChild(h2);
-
-      const p = document.createElement('p');
-      p.innerHTML = game.loresnapshot.text;
-      lore_snapshot.appendChild(p);
-    }
-    
+  const lore_snapshot = document.getElementById('lore-snapshot');
+  if (lore_wrapper && lore_snapshot && game.loresnapshot?.optional) {
+    lore_wrapper.className = 'section';
+    const h2 = document.createElement('h2');
+    h2.textContent = 'Lore Snapshot';
+    lore_snapshot.appendChild(h2);
+    const p = document.createElement('p');
+    p.innerHTML = game.loresnapshot.text;
+    lore_snapshot.appendChild(p);
   }
 
   // Status list
@@ -159,7 +154,7 @@
     log_items.appendChild(li);
   }) ;
 
-  const discussion_link = document.getElementById('dicussion-link');
+  const discussion_link = document.getElementById('discussion-link');
   if (game.contribute) {
     discussion_link.href = game.contribute.discussion_link;
   }
@@ -167,5 +162,8 @@
 
 
 function parseTags(text) {
-  return text.replace(/</g, "&lt;").replace(/>/g, "&gt;")
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 }
