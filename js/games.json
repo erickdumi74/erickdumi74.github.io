@@ -4,32 +4,39 @@
       "title": "Netsouls",
       "tagline": "ASCII roguelike · Souls‑flavored combat",
       "repo": "https://github.com/erickdumi74/netsouls",
-      "intro": [
-        "<strong>Netsouls</strong> is a roguelike dungeon-crawler with a Soulslike heartbeat… and a potato for a hero.",
-        "You are Sir Atarms, the noble (and suspiciously starchy) defender of the Drawer Realm. Armed with whatever pointy stick, rusty cleaver, or bent shield you can find, you descend into the depths where fallen echoes whisper and enemies do not politely take turns.",
-        "There are no hunger timers here — only stamina, timing, and your own persistence. Death is part of the loop; every run teaches you more about your foes, your gear, and why on earth a potato is swinging an axe in the first place.",
-        "Built entirely in Python with ASCII graphics, Netsouls is fast to run, quick to restart, and endlessly replayable. It’s the kind of game that will make you say “one more run” until the sun comes up… or until you get mashed.",
-        "Pattern‑driven combat in pure terminal. Directional attacks, rotating shields, stamina delay — tight and readable."
-      ],
+      "about": {
+        "intro": [
+          "<strong>Netsouls</strong> is a roguelike dungeon-crawler with a Soulslike heartbeat… and a potato for a hero.",
+          "You are Sir Atarms, the noble (and suspiciously starchy) defender of the Drawer Realm. Armed with whatever pointy stick, rusty cleaver, or bent shield you can find, you descend into the depths where fallen echoes whisper and enemies do not politely take turns.",
+          "There are no hunger timers here — only stamina, timing, and your own persistence. Death is part of the loop; every run teaches you more about your foes, your gear, and why on earth a potato is swinging an axe in the first place.",
+          "Built entirely in Python with ASCII graphics, Netsouls is fast to run, quick to restart, and endlessly replayable. It’s the kind of game that will make you say “one more run” until the sun comes up… or until you get mashed.",
+          "Pattern‑driven combat in pure terminal. Directional attacks, rotating shields, stamina delay — tight and readable."
+        ]
+      }
+      ,
       "loresnapshot": [
         "In the Starchborn Age, Echoes are the memory of the world — currency, power, and life itself. Sir Atarms, the Potato Knight, roams shifting realms where death is only a setback, but every return leaves a scar. Some seek the First Thread to master the Netsouls. He just seeks to endure."
       ],
-      "status": [
-        "Core loop running with live HUD and enemy death flow.",
-        "Entity‑based engine (player, enemies, shields/weapons/armor, items... all decoupled)",
-        "Combat mediator, stamina regen delay",
-        "Compressed HP bars for clean HUD",
-        "Real time HUD displaying user and nearby enemies.",
-        "Real time weapon/armor/shield switch with real time stats update.",
-        "Player armor defenses taken into consideration during enemy attacks",
-        "Echo (currency) drop coupled to the player. No Bloodborne type enemies picking up your precious Echoes.",
-        "Enemy/Player combat handled via mediator.",
-        "Devlog entries available and <em>The Making of Netsouls</em> will land soon."
-      ],
+      "status": {
+        "version": "0.142",
+        "state": "In development",
+        "items": [
+          "Core loop running with live HUD and enemy death flow.",
+          "Entity‑based engine (player, enemies, shields/weapons/armor, items... all decoupled)",
+          "Combat mediator, stamina regen delay",
+          "Compressed HP bars for clean HUD",
+          "Real time HUD displaying user and nearby enemies.",
+          "Real time weapon/armor/shield switch with real time stats update.",
+          "Player armor defenses taken into consideration during enemy attacks",
+          "Echo (currency) drop coupled to the player. No Bloodborne type enemies picking up your precious Echoes.",
+          "Enemy/Player combat handled via mediator.",
+          "Devlog entries available and <em>The Making of Netsouls</em> will land soon."
+        ]
+      },
       "howto": {
         "flavor": "Keyboard‑only. Souls‑flavored timing. ASCII swagger.",
         "installblock": "$ python --version   # 3.10+\n# if on Windows and it's your first time install curses\n$ python -m pip install windows-curses  \n$ python main.py",
-        "help": "In‑game help: press ?.",
+        "help": "In‑game help: press \"?\".",
         "sections": [
           {"title":"Movement","items":[["i","Up"],["k","Down"],["j","Left"],["l","Right"]],"tag":"You can’t move into occupied tiles."},
           {"title":"Combat","items":[["e","Attack Up"],["d","Attack Down"],["s","Attack Left"],["f","Attack Right"]]},
@@ -53,6 +60,7 @@
         "[WIP]: windows curses validation",
         "[WIP]: items gating by stats",
         "[WIP]: shield defense rotation logic (light/medium/heavy)",
+        "[Planned]: in-game help",
         "[Planned]: double buffer to stop flickering on Linux",
         "[Planned]: add health flask and upgrade concept (names to be determined)",
         "[Planned]: enemies blink/color before attack",
@@ -92,108 +100,42 @@
       "loresnapshot": [
         "Dr. Alaric Vellum chased a geometry of power he could almost name. The manor remembers. The mirrors remember more."
       ],
-      "status": [
-        "Core loop running with live HUD and enemy death flow.",
-        "Entity‑based engine (player, enemies, shields/weapons/armor, items... all decoupled)",
-        "Combat mediator, stamina regen delay",
-        "Compressed HP bars for clean HUD",
-        "Real time HUD displaying user and nearby enemies.",
-        "Real time weapon/armor/shield switch with real time stats update.",
-        "Player armor defenses taken into consideration during enemy attacks",
-        "Echo (currency) drop coupled to the player. No Bloodborne type enemies picking up your precious Echoes.",
-        "Enemy/Player combat handled via mediator.",
-        "Devlog entries available and <em>The Making of Netsouls</em> will land soon."
-      ],
-      "howto": {
-        "flavor": "Keyboard‑only. Souls‑flavored timing. ASCII swagger.",
-        "installblock": "$ python --version   # 3.10+\n# if on Windows and it's your first time install curses\n$ python -m pip install windows-curses  \n$ python main.py",
-        "help": "In‑game help: press ?.",
-        "sections": [
-          {"title":"Movement","items":[["i","Up"],["k","Down"],["j","Left"],["l","Right"]],"tag":"You can’t move into occupied tiles."},
-          {"title":"Combat","items":[["e","Attack Up"],["d","Attack Down"],["s","Attack Left"],["f","Attack Right"]]},
-          {"title":"Shields","items":[["Space then e/d/s/f","raise/lower shield in that direction"]],"tag":"Press Space first to arm the shield, then a direction."},
-          {"title":"Gear Switching","items":[["r","Switch weapon"],["w","Switch shield"],["g","Switch armor"]],"tag":"You can switch gear mid‑fight."},
-          {"title":"Death & Respawn","items":[["Esc","Respawn (only when dead)"]]},
-          {"title":"Tips","bullets":[
-            "Stamina matters — attacks/defenses can delay regen.",
-            "Positioning beats face‑tanking. Watch enemy arcs.",
-            "Read the HUD; enemy cues are there for a reason."
-          ],"footer":"Bindings: i/k/j/l · e/d/s/f · Space+dir · r/w/g · Esc"}
+      "status": {
+        "version": "0.60",
+        "state": "In development",
+        "items": [
+          "Incomplete but playable version available for download. Missing final puzzle.",
+          "Verbs fully functional and modularized. Engines being called by the main game loop.",
+          "All puzzles states corrected and working.",
+          "Devlog entries available and <em>The Making of Vellum</em> will land soon."
         ]
       },
-      "screens": [
-        {"thumb":"../../assets/netsouls/screenshots/ns01_enemy.png", "full":"../../assets/netsouls/screenshots/ns01_enemy.png", "alt":"First encounter — Potato Knight meets a blob (HUD visible).", "caption":"First steps into the unknown… and something’s already watching."},
-        {"thumb":"../../assets/netsouls/screenshots/ns02_dead.png", "full":"../../assets/netsouls/screenshots/ns02_dead.png", "alt":"You died — Echoes dropped on the floor.", "caption":"One bad dodge. A pile of dropped Echoes. Lesson learned."},
-        {"thumb":"../../assets/netsouls/screenshots/ns03_resurrected_sd.png", "full":"../../assets/netsouls/screenshots/ns03_resurrected_sd.png", "alt":"Resurrected — Echoes waiting to be recovered.", "caption":"Back from the void. Echoes still waiting."},
-        {"thumb":"../../assets/netsouls/screenshots/ns04_rt_action.png", "full":"../../assets/netsouls/screenshots/ns04_rt_action.png", "alt":"Training ground chaos — blob swarm around the Dummy.", "caption":"Every blob in the realm, one indestructible Dummy… and me."}
-      ],
-      "devlogs": [
-        "[WIP]: windows curses validation",
-        "[WIP]: items gating by stats",
-        "[WIP]: shield defense rotation logic (light/medium/heavy)",
-        "[Planned]: double buffer to stop flickering on Linux",
-        "[Planned]: add health flask and upgrade concept (names to be determined)",
-        "[Planned]: enemies blink/color before attack",
-        "[Planned]: reduce nearby enemies HUD filter - too many enemies go out of screen",
-        "[Planned]: add dash",
-        "[Planned]: add rooms",
-        "[Planned]: add npcs",
-        "[Planned]: add items"
-      ],
-      "contribute": {
-        "paragraphs": [
-          "Bug reports and ideas welcome in <a href=\"https://github.com/erickdumi74/netsouls/discussions\" target=\"_blank\" rel=\"noopener\">Discussions</a>.",
-          "Like the work? Small boosts keep the lab humming."
-        ],
-        "links": [
-          { "label": "Ko‑fi", "href": "https://ko-fi.com/yourname", "note": "(soon)" },
-          { "label": "PayPal", "href": "https://paypal.me/yourname", "note": "(soon)" }
-        ],
-        "footer": "Thanks for keeping the lab humming."
-      }
-    },
-
-    "termina-descent": {
-      "title": "Netsouls",
-      "tagline": "ASCII roguelike · Souls‑flavored combat",
-      "repo": "https://github.com/erickdumi74/netsouls",
-      "intro": [
-        "<strong>Netsouls</strong> is a roguelike dungeon-crawler with a Soulslike heartbeat… and a potato for a hero.",
-        "You are Sir Atarms, the noble (and suspiciously starchy) defender of the Drawer Realm. Armed with whatever pointy stick, rusty cleaver, or bent shield you can find, you descend into the depths where fallen echoes whisper and enemies do not politely take turns.",
-        "There are no hunger timers here — only stamina, timing, and your own persistence. Death is part of the loop; every run teaches you more about your foes, your gear, and why on earth a potato is swinging an axe in the first place.",
-        "Built entirely in Python with ASCII graphics, Netsouls is fast to run, quick to restart, and endlessly replayable. It’s the kind of game that will make you say “one more run” until the sun comes up… or until you get mashed.",
-        "Pattern‑driven combat in pure terminal. Directional attacks, rotating shields, stamina delay — tight and readable."
-      ],
-      "loresnapshot": [
-        "In the Starchborn Age, Echoes are the memory of the world — currency, power, and life itself. Sir Atarms, the Potato Knight, roams shifting realms where death is only a setback, but every return leaves a scar. Some seek the First Thread to master the Netsouls. He just seeks to endure."
-      ],
-      "status": [
-        "Core loop running with live HUD and enemy death flow.",
-        "Entity‑based engine (player, enemies, shields/weapons/armor, items... all decoupled)",
-        "Combat mediator, stamina regen delay",
-        "Compressed HP bars for clean HUD",
-        "Real time HUD displaying user and nearby enemies.",
-        "Real time weapon/armor/shield switch with real time stats update.",
-        "Player armor defenses taken into consideration during enemy attacks",
-        "Echo (currency) drop coupled to the player. No Bloodborne type enemies picking up your precious Echoes.",
-        "Enemy/Player combat handled via mediator.",
-        "Devlog entries available and <em>The Making of Netsouls</em> will land soon."
-      ],
       "howto": {
-        "flavor": "Keyboard‑only. Souls‑flavored timing. ASCII swagger.",
-        "installblock": "$ python --version   # 3.10+\n# if on Windows and it's your first time install curses\n$ python -m pip install windows-curses  \n$ python main.py",
-        "help": "In‑game help: press ?.",
+        "flavor": "Keyboard-only. Gothic intrigue. Puzzles that whisper before they bite.",
+        "installblock": "$ python --version   # 3.10+\n$ python game.py",
+        "help": "In-game help: type help.",
         "sections": [
-          {"title":"Movement","items":[["i","Up"],["k","Down"],["j","Left"],["l","Right"]],"tag":"You can’t move into occupied tiles."},
-          {"title":"Combat","items":[["e","Attack Up"],["d","Attack Down"],["s","Attack Left"],["f","Attack Right"]]},
-          {"title":"Shields","items":[["Space then e/d/s/f","raise/lower shield in that direction"]],"tag":"Press Space first to arm the shield, then a direction."},
-          {"title":"Gear Switching","items":[["r","Switch weapon"],["w","Switch shield"],["g","Switch armor"]],"tag":"You can switch gear mid‑fight."},
-          {"title":"Death & Respawn","items":[["Esc","Respawn (only when dead)"]]},
+          {"title":"Exploration","items":[["look or look around","Survey the room"],["examine <item>","study something closely (descriptions may evolve based on progress)"]]},
+          {"title":"Inventory","items":[["take <item>","pick up an item (if possible)"],["inventory ","list what you’re carrying"]]},
+          {"title":"Interaction","items":[["use <item> on <target>","apply an item to something"],["turn <item> <direction> ","some objects turn left or right"],["enter <door or passage>","move through doors or passages"]]},
+          {"title":"Input","items":[["type <code>","for keypads, consoles, or terminals"],["say <phrase>","certain locks respond to spoken words"]]},
+          {
+            "title":"Game Management",
+            "items":[
+              ["save <slot>","save to slots 1–4"],
+              ["load <slot>","load from slots 1–4"],
+              ["delete <slot>","delete a save"],
+              ["help","list commands"],
+              ["credits","show credits"],
+              ["quit or exit","leave the game"]
+            ]
+          },
           {"title":"Tips","bullets":[
-            "Stamina matters — attacks/defenses can delay regen.",
-            "Positioning beats face‑tanking. Watch enemy arcs.",
-            "Read the HUD; enemy cues are there for a reason."
-          ],"footer":"Bindings: i/k/j/l · e/d/s/f · Space+dir · r/w/g · Esc"}
+            "Examine often — clues can unlock only after related discoveries.",
+            "Details matter — phrases, symbols, and wording may be important later.",
+            "Progress is layered — items in one room often resolve puzzles elsewhere.",
+            "The game nudges, but rarely tells — agency over autopilot."
+          ],"footer":"Core verbs: look · examine · take · inventory · use … on … · turn … left/right · enter … · type … · say … · save/load/delete · saves · help · credits · quit/exit"}
         ]
       },
       "screens": [
@@ -230,3 +172,4 @@
 
   }
 }
+

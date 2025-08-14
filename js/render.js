@@ -44,7 +44,11 @@
 
   // Status list
   const status = document.getElementById('status-list');
-  (game.status || []).forEach(item => {
+  const version = document.getElementById('version');
+  const state = document.getElementById('state');
+  version.textContent = game.status.version;
+  state.textContent = game.status.state;
+  (game.status.items || []).forEach(item => {
     const li = document.createElement('li');
     li.innerHTML = item;
     status.appendChild(li);
@@ -69,7 +73,7 @@
         ul.className = 'centered-list';
         sec.items.forEach(([kbd, desc]) => {
           const li = document.createElement('li');
-          li.innerHTML = `<kbd>${kbd}</kbd> ${desc}`;
+          li.innerHTML = `<kbd>${parseTags(kbd)}</kbd> -> ${parseTags(desc)}`;
           ul.appendChild(li);
         });
         wrap.appendChild(ul);
@@ -178,3 +182,8 @@
     }
   }
 })();
+
+
+function parseTags(text) {
+  return text.replace(/</g, "&lt;").replace(/>/g, "&gt;")
+}
