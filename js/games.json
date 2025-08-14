@@ -72,15 +72,7 @@
         "[Planned]: add items"
       ],
       "contribute": {
-        "paragraphs": [
-          "Bug reports and ideas welcome in <a href=\"https://github.com/erickdumi74/netsouls/discussions\" target=\"_blank\" rel=\"noopener\">Discussions</a>.",
-          "Like the work? Small boosts keep the lab humming."
-        ],
-        "links": [
-          { "label": "Ko‑fi", "href": "https://ko-fi.com/yourname", "note": "(soon)" },
-          { "label": "PayPal", "href": "https://paypal.me/yourname", "note": "(soon)" }
-        ],
-        "footer": "Thanks for keeping the lab great."
+        "discussion_link": "https://github.com/erickdumi74/netsouls/discussions"
       }
     },
 
@@ -155,15 +147,82 @@
         "[Planned] Generate and upload terminal screen shots."
       ],
       "contribute": {
-        "paragraphs": [
-          "Bug reports and ideas welcome in <a href=\"https://github.com/erickdumi74/vellum/discussions\" target=\"_blank\" rel=\"noopener\">Discussions</a>.",
-          "Like the work? Small boosts keep the lab humming."
+        "discussion_link": "https://github.com/erickdumi74/vellum/discussions"
+      }
+    },
+
+    "terminal-descent": {
+      "title": "Vellum",
+      "tagline": "Gothic terminal puzzle game · In progress",
+      "repo": "https://github.com/erickdumi74/vellum",
+      "about": {
+        "intro": [
+          "Vellum is a narrative puzzle game with deep lore, modular verbs, and deliberate pacing. Built in Python to emphasize clarity and immersion."
         ],
-        "links": [
-          { "label": "Ko‑fi", "href": "https://ko-fi.com/yourname", "note": "(soon)" },
-          { "label": "PayPal", "href": "https://paypal.me/yourname", "note": "(soon)" }
-        ],
-        "footer": "Thanks for keeping the lab great."
+        "items": [
+          "Puzzle design paced for discovery, not timers.",
+          "Modular engine with verbs, items, and rooms encapsulated.",
+          "Narrative driven immersive story telling."
+        ]
+      },
+      "loresnapshot": [
+        "Dr. Alaric Vellum chased a geometry of power he could almost name. The manor remembers. The mirrors remember more."
+      ],
+      "status": {
+        "version": "0.60",
+        "state": "In development",
+        "items": [
+          "Incomplete but playable version available for download. Missing final puzzle.",
+          "Verbs fully functional and modularized. Engines being called by the main game loop.",
+          "All puzzles states corrected and working.",
+          "Devlog entries available and <em>The Making of Vellum</em> will land soon."
+        ]
+      },
+      "howto": {
+        "flavor": "Keyboard-only. Gothic intrigue. Puzzles that whisper before they bite.",
+        "installblock": "$ python --version   # 3.10+\n$ python game.py",
+        "help": "In-game help: type help.",
+        "sections": [
+          {"title":"Exploration","items":[["look or look around","Survey the room"],["examine <item>","study something closely (descriptions may evolve based on progress)"]]},
+          {"title":"Inventory","items":[["take <item>","pick up an item (if possible)"],["inventory ","list what you’re carrying"]]},
+          {"title":"Interaction","items":[["use <item> on <target>","apply an item to something"],["turn <item> <direction> ","some objects turn left or right"],["enter <door or passage>","move through doors or passages"]]},
+          {"title":"Input","items":[["type <code>","for keypads, consoles, or terminals"],["say <phrase>","certain locks respond to spoken words"]]},
+          {
+            "title":"Game Management",
+            "items":[
+              ["save <slot>","save to slots 1–4"],
+              ["load <slot>","load from slots 1–4"],
+              ["delete <slot>","delete a save"],
+              ["help","list commands"],
+              ["credits","show credits"],
+              ["quit or exit","leave the game"]
+            ]
+          },
+          {"title":"Tips","bullets":[
+            "Examine often — clues can unlock only after related discoveries.",
+            "Details matter — phrases, symbols, and wording may be important later.",
+            "Progress is layered — items in one room often resolve puzzles elsewhere.",
+            "The game nudges, but rarely tells — agency over autopilot."
+          ],
+          "footer":"Core verbs: look · examine · take · inventory · use … on … · turn … left/right · enter … · type … · say … · save/load/delete · saves · help · credits · quit/exit"}
+        ]
+      },
+      "screens": [
+        {"image":"../../assets/vellum/screenshots/vel01.png", "alt":"Study initial interactions.", "caption":"Study - early interactions."},
+        {"image":"../../assets/vellum/screenshots/vel02.png", "alt":"Hallway note only visible after examine plaque.", "caption":"Hallway - checking state logic. Note only visible after examine plaque."},
+        {"image":"../../assets/vellum/screenshots/vel03.png", "alt":"Secret Chamber mirror interaction loop.", "caption":"Secret Chamber - testing mirror interaction loop."},
+        {"image":"../../assets/vellum/screenshots/vel04.png", "alt":"Lab test prism activation.", "caption":"Lab - test prism activation."}
+      ],
+      "devlogs": [
+        "[WIP] Object‑oriented refactor: items_data per room; alias resolver overhaul.",
+        "[WIP] Lore intensity: add more description to room items and interactions (take, poke, use, examine).",
+        "[WIP] Final puzzle design: final room mechanics, ethical fork, escape route, machine & lore integration.",
+        "[Planned] Structural refactor: Move each file to a directory for encapsulation and clarity.",
+        "[Planned] Public build notes and changelog snippets.",
+        "[Planned] Generate and upload terminal screen shots."
+      ],
+      "contribute": {
+        "discussion_link": "https://github.com/erickdumi74/netsouls/discussions"
       }
     }
 
