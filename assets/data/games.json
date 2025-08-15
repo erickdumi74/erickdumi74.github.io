@@ -14,7 +14,7 @@
         ]
       },
       "loresnapshot": {
-        "optional": true,
+        "optional": false,
         "text": "In the Starchborn Age, Echoes are the memory of the world — currency, power, and life itself. Sir Atarms, the Potato Knight, roams shifting realms where death is only a setback, but every return leaves a scar. Some seek the First Thread to master the Netsouls. He just seeks to endure."
       },
       "status": {
@@ -91,7 +91,7 @@
         ]
       },
       "loresnapshot": {
-        "optional": true,
+        "optional": false,
         "text": "Dr. Alaric Vellum chased a geometry of power he could almost name. The manor remembers. The mirrors remember more."
       },
       "status": {
@@ -168,8 +168,7 @@
         ]
       },
       "loresnapshot": {
-        "optional": false,
-        "text": "Dr. Alaric Vellum chased a geometry of power he could almost name. The manor remembers. The mirrors remember more."
+        "optional": true
       },
       "status": {
         "version": "1.0",
@@ -203,8 +202,6 @@
       ],
       "devlogs": [
         "[Planned] Add more \"realistic\" physics. Currently Terminal Descent uses a simplified thrust model for gameplay purposes."
-
-        
       ],
       "contribute": {
         "discussion_link": "https://github.com/erickdumi74/terminal-descent/discussions"
