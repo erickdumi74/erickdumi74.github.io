@@ -5,8 +5,8 @@
         "title": "Game Not Found",
         "tagline": "console: no match in archives",
         "intro": [
-            "The console spits back a garbled error.",
-            "(Perhaps you mistyped? Or perhaps this game… doesn’t exist yet in your timeline.)"
+            "The console spits back a garbled error. The lab hums… but nothing happens.",
+            "(Perhaps you mistyped? Or perhaps this game… doesn’t yet exist in your timeline.)"
         ],
         "contribute": {
           "discussion_link": "https://github.com/erickdumi74/discussions"
