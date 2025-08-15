@@ -6,7 +6,6 @@
 
   const data = await res.json();
   let game = data.games[gameId];
-  console.log(game);
   if (!game || gameId == 'notfound') {
     // Hide sections that don’t make sense on 404
     hide('#play'); hide('#screenshots'); hide('#status'); hide('#devlogs'); hide('#loresnapshot');
