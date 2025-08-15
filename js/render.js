@@ -1,16 +1,17 @@
 (async function () {
   const qsGame = new URLSearchParams(location.search).get('game');
   const attrGame = document.body.dataset.game;
-  var gameId = qsGame || attrGame;
+  let gameId = (qsGame || attrGame || '').trim().toLowerCase();
   const res = await fetch('../assets/data/games.json');  // adjust path if needed
 
   const data = await res.json();
-  var game = data.games[gameId];
-  if (!game) {
+  let game = data.games[gameId];
+  console.log(game);
+  if (!game || gameId == 'notfound') {
     // Hide sections that don’t make sense on 404
     hide('#play'); hide('#screenshots'); hide('#status'); hide('#devlogs'); hide('#loresnapshot');
     gameId = 'notfound';
-    game = data.games['notfound'];
+    game = data.games.notfound;
     renderNotFound(game, data)
     return
   }
