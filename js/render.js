@@ -172,6 +172,11 @@ function parseTags(text) {
 }
 
 function renderNotFound(game, data) {
+  // Meta
+  ensureMeta('robots', 'noindex, follow');
+  ensureMeta('googlebot', 'noindex, follow');   // redundancy for Google
+  setCanonical('https://erickdumi74.github.io/projects/');
+
   // Header
   const titleEl = document.getElementById('doc-title');
   const h1 = document.getElementById('game-title');
@@ -201,4 +206,24 @@ function renderNotFound(game, data) {
 
 // Little helper
 function hide(sel){ const el = document.querySelector(sel); if (el) el.style.display = 'none'; }
+
+function ensureMeta(name, content) {
+  let m = document.querySelector(`meta[name="${name}"]`);
+  if (!m) {
+    m = document.createElement('meta');
+    m.setAttribute('name', name);
+    document.head.appendChild(m);
+  }
+  m.setAttribute('content', content);
+}
+
+function setCanonical(href) {
+  let link = document.querySelector('link[rel="canonical"]');
+  if (!link) {
+    link = document.createElement('link');
+    link.setAttribute('rel', 'canonical');
+    document.head.appendChild(link);
+  }
+  link.setAttribute('href', href);
+}
 
