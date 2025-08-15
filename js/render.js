@@ -1,14 +1,18 @@
 (async function () {
   const qsGame = new URLSearchParams(location.search).get('game');
   const attrGame = document.body.dataset.game;
-  const gameId = qsGame || attrGame;
+  var gameId = qsGame || attrGame;
   const res = await fetch('../assets/data/games.json');  // adjust path if needed
 
   const data = await res.json();
-  const game = data.games[gameId];
+  var game = data.games[gameId];
   if (!game) {
-    renderNotFound(gameId, data);
-    return;
+    // Hide sections that don’t make sense on 404
+    hide('#play'); hide('#screenshots'); hide('#status'); hide('#devlogs'); hide('#loresnapshot');
+    gameId = 'notfound';
+    game = data.games['notfound'];
+    renderNotFound(game, data)
+    return
   }
 
   // Title / header
@@ -167,30 +171,28 @@ function parseTags(text) {
     .replace(/>/g, "&gt;");
 }
 
-function renderNotFound(badId, data) {
+function renderNotFound(game, data) {
   // Header
   const titleEl = document.getElementById('doc-title');
   const h1 = document.getElementById('game-title');
   const tag = document.getElementById('game-tagline');
-  if (titleEl) titleEl.textContent = `Not Found · Terminal Minds`;
-  if (h1) h1.textContent = `Game not found`;
-  if (tag) tag.textContent = `console: no match in archives`;
+  if (titleEl) titleEl.textContent = `${game.title} · Terminal Minds`;
+  if (h1) h1.textContent = game.title;
+  if (tag) tag.textContent = game.tagline;
 
   // About: lore-style message
   const about = document.getElementById('about-content');
   if (about) {
-    const p1 = document.createElement('p');
-    p1.innerHTML = `The console spits back a garbled error. The lab hums… but nothing answers.`;
-    const p2 = document.createElement('p');
-    p2.innerHTML = `(Perhaps you mistyped? Or perhaps this game… doesn’t exist yet in your timeline.)`;
-    const p3 = document.createElement('p');
+    (game.intro || []).forEach(p => {
+      const p1 = document.createElement('p');
+      p1.innerHTML = p;
+      about.appendChild(p1)
+    });
+    const p = document.createElement('p');
     const known = Object.keys(data.games || {}).map(k => `<code>${k}</code>`).join(' · ');
-    p3.innerHTML = `Known projects: ${known || '—'}`;
-    about.append(p1, p2, p3);
+    p.innerHTML = `Known projects: ${known || '—'}`;
+    about.appendChild(p)
   }
-
-  // Hide sections that don’t make sense on 404
-  hide('#play'); hide('#screenshots'); hide('#status'); hide('#devlogs'); hide('#loresnapshot');
 
   // Optional: point repo link back home
   const repo = document.getElementById('repo-link');

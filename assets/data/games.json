@@ -1,5 +1,18 @@
 {
   "games": {
+
+    "notfound": {
+        "title": "Game Not Found",
+        "tagline": "console: no match in archives",
+        "intro": [
+            "The console spits back a garbled error.",
+            "(Perhaps you mistyped? Or perhaps this game… doesn’t exist yet in your timeline.)"
+        ],
+        "contribute": {
+          "discussion_link": "https://github.com/erickdumi74/discussions"
+        }
+    },
+
     "netsouls": {
       "title": "Netsouls",
       "tagline": "ASCII roguelike · Souls‑flavored combat",
