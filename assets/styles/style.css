@@ -492,3 +492,64 @@ body:has(.lightbox:target){ overflow: hidden; }
   content: "·";
   margin: 0 4px;
 }
+
+
+/* modal zoom on images */
+
+.icon-trigger img { cursor: zoom-in; }
+
+.icon-lightbox {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.9);
+  align-items: center; justify-content: center;
+  z-index: 9999;
+}
+.icon-lightbox:target { display: flex; }
+
+.icon-lightbox__figure {
+  position: relative;
+  max-width: 90vw; max-height: 90vh;
+}
+.icon-lightbox__figure img {
+  max-width: 100%; max-height: 100%;
+  border-radius: 8px;
+}
+
+.icon-lightbox__bg {
+  position: absolute; inset: 0;
+  text-indent: -9999px;
+}
+
+/* unify close button style for screenshots + icon modals */
+/* make icon modal close button look like screenshot close button */
+.icon-lightbox__close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  line-height: 1;
+  font-size: 28px;
+  text-decoration: none;
+  color: var(--white);
+  background: rgba(0,0,0,0.5);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+.icon-lightbox__close:hover {
+  background: var(--charcoal);
+  color: var(--green);
+  text-decoration: none;
+}
+
+@media (max-width: 880px) {
+  .lightbox__close, 
+  .lightbox__prev, 
+  .lightbox__next,
+  .icon-lightbox__close {      /* 👈 added */
+    font-size: 24px;
+    padding: 6px 8px;
+  }
+}
+
