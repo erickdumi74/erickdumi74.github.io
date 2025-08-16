@@ -225,13 +225,6 @@ function renderNotFound(game, data) {
     about.appendChild(np);
 
     initIconModal(game);
-    /*
-    // Add game image
-    const icon_image = document.getElementById('icon-image');
-
-    // set the image
-    icon_image.src = game.icon_image;
-    */
 
     // set the correct discussion link
     const discussion_link = document.getElementById('discussion-link');

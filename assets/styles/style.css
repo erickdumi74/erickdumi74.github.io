@@ -553,3 +553,13 @@ body:has(.lightbox:target){ overflow: hidden; }
   }
 }
 
+.lightbox__figure img,
+.icon-lightbox__figure img {
+  width: auto;                 /* don’t stretch to container width */
+  height: auto;
+  max-width: min(90vw, 1200px);/* cap by viewport width (and an optional hard max) */
+  max-height: 90vh;            /* cap by viewport height */
+  object-fit: contain;         /* never distort */
+  display: block;
+  margin: 0 auto;
+}
