@@ -394,3 +394,32 @@ body:has(.lightbox:target){ overflow: hidden; }
     display: block;
   }
 }
+
+/* center logo */
+
+/* Make sure these run AFTER your other header rules */
+@media (max-width: 880px) {
+  header.header--split { 
+    display: block;
+    text-align: center;
+  }
+
+  /* center the actual logo block no matter what it’s wrapped in */
+  header.header--split .logo-wrap,
+  header.header--split .logo,
+  header.header--split .logo-link {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;              /* in case something set a float */
+  }
+
+  /* center the image itself too (belt + suspenders) */
+  header.header--split .logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 150px;         /* keep your chosen mobile size */
+    height: auto;
+  }
+}
