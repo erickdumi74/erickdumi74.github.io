@@ -31,7 +31,7 @@
           "You are Sir Atarms, the noble (and suspiciously starchy) defender of the Drawer Realm. Armed with whatever pointy stick, rusty cleaver, or bent shield you can find, you descend into the depths where fallen echoes whisper and enemies do not politely take turns.",
           "There are no hunger timers here — only stamina, timing, and your own persistence. Death is part of the loop; every run teaches you more about your foes, your gear, and why on earth a potato is swinging an axe in the first place.",
           "Built entirely in Python with ASCII graphics, Netsouls is fast to run, quick to restart, and endlessly replayable. It’s the kind of game that will make you say “one more run” until the sun comes up… or until you get mashed.",
-          "Pattern‑driven combat in pure terminal. Directional attacks, rotating shields, stamina delay — tight and readable."
+          "Pattern‑driven combat in pure terminal. Directional attacks, rotating shields, stamina delay — tight and readable. You can currently create your own monsters, their move and attack logic and have fun fighting them."
         ]
       },
       "loresnapshot": {
