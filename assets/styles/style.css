@@ -480,3 +480,16 @@ body:has(.lightbox:target){ overflow: hidden; }
     padding-right: 0px;
   }
 }
+
+/* link items */
+.link_item {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+              "Liberation Mono", "Courier New", monospace;
+  text-decoration: none; /* remove underline, optional */
+  margin: 0 4px;           /* breathing room between links */
+}
+
+.link_item + .link_item::before {
+  content: "·";
+  margin: 0 4px;
+}

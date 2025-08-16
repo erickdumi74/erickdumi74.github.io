@@ -2,16 +2,20 @@
   "games": {
 
     "notfound": {
-        "title": "Game Not Found",
-        "tagline": "console: no match in archives",
-        "icon_image": "/assets/images/games/404.png",
-        "intro": [
-            "The console spits back a garbled error. The lab hums… but nothing happens.",
-            "(Perhaps you mistyped? Or perhaps this game… doesn’t yet exist in your timeline.)"
-        ],
-        "contribute": {
-          "discussion_link": "https://github.com/erickdumi74/erickdumi74.github.io/discussions"
-        }
+      "title": "Game Not Found",
+      "tagline": "console: no match in archives",
+      "icon_image": "/assets/images/games/404.png",
+      "intro": [
+          "The console spits back a garbled error. The lab hums… but nothing happens.",
+          "(Perhaps you mistyped? Or perhaps this game… doesn’t yet exist in your timeline.)"
+      ],
+      "contribute": {
+        "discussion_link": "https://github.com/erickdumi74/erickdumi74.github.io/discussions"
+      },
+      "back_link": {
+        "title": "Main Page",
+        "link": "/"
+      } 
     },
 
     "netsouls": {
@@ -88,7 +92,10 @@
       ],
       "contribute": {
         "discussion_link": "https://github.com/erickdumi74/netsouls/discussions"
-      }
+      },
+      "back_link": {
+        "link": "/projects/?game=netsouls"
+      } 
     },
 
     "vellum": {
@@ -165,6 +172,9 @@
       ],
       "contribute": {
         "discussion_link": "https://github.com/erickdumi74/vellum/discussions"
+      },
+      "back_link": {
+        "link": "/projects/?game=vellum"
       }
     },
 
@@ -222,6 +232,9 @@
       ],
       "contribute": {
         "discussion_link": "https://github.com/erickdumi74/terminal-descent/discussions"
+      },
+      "back_link": {
+        "link": "/projects/?game=terminal-descent"
       }
     }
   }

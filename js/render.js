@@ -192,7 +192,6 @@ function renderNotFound(game, data) {
   const icon_image = document.getElementById('icon-image');
 
   // hide unwanted nav items
-  console.log(document.getElementById('nav-play'));
   document.getElementById('nav-play').style.display = 'none';
   document.getElementById('nav-logs').style.display = 'none';
   document.getElementById('nav-lore').style.display = 'none';
@@ -206,9 +205,22 @@ function renderNotFound(game, data) {
       p1.innerHTML = p;
       about.appendChild(p1);
     });
+
+    // create game links
     const p = document.createElement('p');
-    const known = Object.keys(data.games || {}).map(k => `<code>${k}</code>`).join(' · ');
-    p.innerHTML = `Known projects: ${known || '—'}`;
+    p.innerHTML = 'Known projects: ';
+    const links = Object.values(data.games || {}).map(game => {
+      const a = document.createElement('a');
+      a.className = 'link_item';
+      a.href = game.back_link?.link || '#';
+      a.textContent = game.back_link?.title || game.title;
+      return a;
+    });
+
+    links.forEach((a, i) => {
+      p.appendChild(a);
+    });
+
     about.appendChild(p);
 
     // set the image
