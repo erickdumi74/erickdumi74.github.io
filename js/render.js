@@ -292,3 +292,42 @@ function initIconModal(game) {
     wrap.appendChild(img);
   }
 
+document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape' && e.key !== 'Esc') return;
+    const h = location.hash;
+    if (!h) return;
+
+    const target = document.querySelector(h);
+    if (!target) return;
+
+    const isLb = target.classList.contains('lightbox') || target.classList.contains('icon-lightbox');
+    if (!isLb) return;
+
+    e.preventDefault();
+
+    const closeHash = document.getElementById('screenshots') ? '#screenshots' : '#';
+    // No extra history entry:
+    history.replaceState(null, document.title, location.pathname + location.search + closeHash);
+
+    // Safari/edge-case fallback if hash didn't change:
+    if (location.hash !== closeHash) {
+      setTimeout(() => { location.hash = closeHash; }, 0);
+    }
+  }, true);
+
+
+function isLightboxHash(h) {
+    const el = h ? document.querySelector(h) : null;
+    return !!(el && (el.classList.contains('lightbox') || el.classList.contains('icon-lightbox')));
+  }
+
+  function clearHashOrFallback() {
+    // Prefer replaceState so ESC doesn't add a history entry
+    history.replaceState(null, document.title, location.pathname + location.search);
+
+    // Safari / odd cases: if the hash is still there, click the built-in close link
+    if (location.hash) {
+      const sel = `${location.hash} .lightbox__close, ${location.hash} .icon-lightbox__close, ${location.hash} .lightbox__bg, ${location.hash} .icon-lightbox__bg`;
+      document.querySelector(sel)?.click();
+    }
+  }
