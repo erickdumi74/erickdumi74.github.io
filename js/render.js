@@ -160,6 +160,7 @@
     log_items.appendChild(li);
   }) ;
 
+  // Contribute
   const discussion_link = document.getElementById('discussion-link');
   if (game.contribute) {
     discussion_link.href = game.contribute.discussion_link;
@@ -210,7 +211,14 @@ function renderNotFound(game, data) {
     p.innerHTML = `Known projects: ${known || '—'}`;
     about.appendChild(p);
 
+    // set the image
     icon_image.src = game.icon_image;
+
+    // set the correct discussion link
+    const discussion_link = document.getElementById('discussion-link');
+    if (game.contribute) {
+      discussion_link.href = game.contribute.discussion_link;
+    }
 
   }
 
