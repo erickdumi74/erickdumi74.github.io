@@ -187,7 +187,15 @@ function renderNotFound(game, data) {
   if (h1) h1.textContent = game.title;
   if (tag) tag.textContent = game.tagline;
 
+  // Add game image
   const icon_image = document.getElementById('icon-image');
+
+  // hide unwanted nav items
+  console.log(document.getElementById('nav-play'));
+  document.getElementById('nav-play').style.display = 'none';
+  document.getElementById('nav-logs').style.display = 'none';
+  document.getElementById('nav-lore').style.display = 'none';
+  document.getElementById('nav-shots').style.display = 'none';
 
   // About: lore-style message
   const about = document.getElementById('about-content');
