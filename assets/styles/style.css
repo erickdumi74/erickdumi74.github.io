@@ -20,7 +20,7 @@ html, body { margin: 0; padding: 0; }
 /* Base */
 body{
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url('assets/bg.png');
+  background-image: url('/assets/images/bg.png');
   background-attachment: fixed;
   color: var(--fg);
   padding: 20px 30px;

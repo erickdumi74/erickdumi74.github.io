@@ -4,7 +4,7 @@
     "notfound": {
         "title": "Game Not Found",
         "tagline": "console: no match in archives",
-        "icon_image": "../../assets/404.png",
+        "icon_image": "/assets/images/404.png",
         "intro": [
             "The console spits back a garbled error. The lab hums… but nothing happens.",
             "(Perhaps you mistyped? Or perhaps this game… doesn’t yet exist in your timeline.)"
@@ -19,7 +19,7 @@
       "tagline": "ASCII roguelike · Souls‑flavored combat",
       "repo": "https://github.com/erickdumi74/netsouls",
       "about": {
-        "icon_image": "../../assets/netsouls.png",
+        "icon_image": "/assets/images/netsouls.png",
         "intro": [
           "<strong>Netsouls</strong> is a roguelike dungeon-crawler with a Soulslike heartbeat… and a potato for a hero.",
           "You are Sir Atarms, the noble (and suspiciously starchy) defender of the Drawer Realm. Armed with whatever pointy stick, rusty cleaver, or bent shield you can find, you descend into the depths where fallen echoes whisper and enemies do not politely take turns.",
@@ -67,10 +67,10 @@
         ]
       },
       "screens": [
-        {"image":"../../assets/netsouls/screenshots/ns01_enemy.png", "alt":"First encounter — Potato Knight meets a blob (HUD visible).", "caption":"First steps into the unknown… and something’s already watching."},
-        {"image":"../../assets/netsouls/screenshots/ns02_dead.png", "alt":"You died — Echoes dropped on the floor.", "caption":"One bad dodge. A pile of dropped Echoes. Lesson learned."},
-        {"image":"../../assets/netsouls/screenshots/ns03_resurrected_sd.png", "alt":"Resurrected — Echoes waiting to be recovered.", "caption":"Back from the void. Echoes still waiting."},
-        {"image":"../../assets/netsouls/screenshots/ns04_rt_action.png", "alt":"Training ground chaos — blob swarm around the Dummy.", "caption":"Every blob in the realm, one indestructible Dummy… and me."}
+        {"image":"/assets/netsouls/screenshots/ns01_enemy.png", "alt":"First encounter — Potato Knight meets a blob (HUD visible).", "caption":"First steps into the unknown… and something’s already watching."},
+        {"image":"/assets/netsouls/screenshots/ns02_dead.png", "alt":"You died — Echoes dropped on the floor.", "caption":"One bad dodge. A pile of dropped Echoes. Lesson learned."},
+        {"image":"/assets/netsouls/screenshots/ns03_resurrected_sd.png", "alt":"Resurrected — Echoes waiting to be recovered.", "caption":"Back from the void. Echoes still waiting."},
+        {"image":"/assets/netsouls/screenshots/ns04_rt_action.png", "alt":"Training ground chaos — blob swarm around the Dummy.", "caption":"Every blob in the realm, one indestructible Dummy… and me."}
       ],
       "devlogs": [
         "[WIP]: windows curses validation",
@@ -96,7 +96,7 @@
       "tagline": "Gothic terminal puzzle game · In progress",
       "repo": "https://github.com/erickdumi74/vellum",
       "about": {
-        "icon_image": "../../assets/vellum.png",
+        "icon_image": "/assets/images/vellum.png",
         "intro": [
           "Vellum is a narrative puzzle game with deep lore, modular verbs, and deliberate pacing. Built in Python to emphasize clarity and immersion."
         ],
@@ -150,10 +150,10 @@
         ]
       },
       "screens": [
-        {"image":"../../assets/vellum/screenshots/vel01.png", "alt":"Study initial interactions.", "caption":"Study - early interactions."},
-        {"image":"../../assets/vellum/screenshots/vel02.png", "alt":"Hallway note only visible after examine plaque.", "caption":"Hallway - checking state logic. Note only visible after examine plaque."},
-        {"image":"../../assets/vellum/screenshots/vel03.png", "alt":"Secret Chamber mirror interaction loop.", "caption":"Secret Chamber - testing mirror interaction loop."},
-        {"image":"../../assets/vellum/screenshots/vel04.png", "alt":"Lab test prism activation.", "caption":"Lab - test prism activation."}
+        {"image":"/assets/vellum/screenshots/vel01.png", "alt":"Study initial interactions.", "caption":"Study - early interactions."},
+        {"image":"/assets/vellum/screenshots/vel02.png", "alt":"Hallway note only visible after examine plaque.", "caption":"Hallway - checking state logic. Note only visible after examine plaque."},
+        {"image":"/assets/vellum/screenshots/vel03.png", "alt":"Secret Chamber mirror interaction loop.", "caption":"Secret Chamber - testing mirror interaction loop."},
+        {"image":"/assets/vellum/screenshots/vel04.png", "alt":"Lab test prism activation.", "caption":"Lab - test prism activation."}
       ],
       "devlogs": [
         "[WIP] Object‑oriented refactor: items_data per room; alias resolver overhaul.",
@@ -173,7 +173,7 @@
       "tagline": "Minimalist moon‑lander · Skill over luck",
       "repo": "https://github.com/erickdumi74/terminal-descent",
       "about": {
-        "icon_image": "../../assets/terminal.png",
+        "icon_image": "/assets/images/terminal.png",
         "intro": [
           "A tiny terminal lander: throttle, gravity, fuel. No fluff—just descent math and your nerves."
         ],
@@ -214,8 +214,8 @@
         ]
       },
       "screens": [
-        {"image":"../../assets/terminal-descent/screenshots/term01.png", "alt":"Easy with low gravity.", "caption":"Easy with low gravity is just too easy..."},
-        {"image":"../../assets/terminal-descent/screenshots/term02.png", "alt":"Hard with high gravity.", "caption":"...however hard with high gravity is not!"}
+        {"image":"/assets/terminal-descent/screenshots/term01.png", "alt":"Easy with low gravity.", "caption":"Easy with low gravity is just too easy..."},
+        {"image":"/assets/terminal-descent/screenshots/term02.png", "alt":"Hard with high gravity.", "caption":"...however hard with high gravity is not!"}
       ],
       "devlogs": [
         "[Planned] Add more \"realistic\" physics. Currently Terminal Descent uses a simplified thrust model for gameplay purposes."
