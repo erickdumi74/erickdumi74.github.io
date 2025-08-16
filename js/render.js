@@ -206,9 +206,12 @@ function renderNotFound(game, data) {
       about.appendChild(p1);
     });
 
-    // create game links
+    // create label for the links
     const p = document.createElement('p');
-    p.innerHTML = 'Known projects: ';
+    p.innerHTML = 'Known projects:';
+    about.appendChild(p);
+    // create the links
+    const np = document.createElement('p');
     const links = Object.values(data.games || {}).map(game => {
       const a = document.createElement('a');
       a.className = 'link_item';
@@ -218,10 +221,10 @@ function renderNotFound(game, data) {
     });
 
     links.forEach((a, i) => {
-      p.appendChild(a);
+      np.appendChild(a);
     });
 
-    about.appendChild(p);
+    about.appendChild(np);
 
     // set the image
     icon_image.src = game.icon_image;
