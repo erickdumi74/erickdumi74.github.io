@@ -187,18 +187,23 @@ function renderNotFound(game, data) {
   if (h1) h1.textContent = game.title;
   if (tag) tag.textContent = game.tagline;
 
+  const icon_image = document.getElementById('icon-image');
+
   // About: lore-style message
   const about = document.getElementById('about-content');
   if (about) {
     (game.intro || []).forEach(p => {
       const p1 = document.createElement('p');
       p1.innerHTML = p;
-      about.appendChild(p1)
+      about.appendChild(p1);
     });
     const p = document.createElement('p');
     const known = Object.keys(data.games || {}).map(k => `<code>${k}</code>`).join(' · ');
     p.innerHTML = `Known projects: ${known || '—'}`;
-    about.appendChild(p)
+    about.appendChild(p);
+
+    icon_image.src = game.icon_image;
+
   }
 
   // Optional: point repo link back home
