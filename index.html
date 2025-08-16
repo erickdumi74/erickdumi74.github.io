@@ -85,49 +85,64 @@
     <div class="header-text">
       <h1>We are Terminal Minds!</h1>
       <p class="tag mono">Code. Play. Learn. Enjoy.</p>
-      <nav>
-        <a href="projects/?game=vellum">Vellum</a>
-        <a href="projects/?game=netsouls">Netsouls</a>
-        <a href="projects/?game=terminal-descent">Terminal Descent</a>
-        <a href="#contribute">Contribute</a>
+      <!-- ====== Project Shortcuts (Icon Row) ====== -->
+      <nav class="project-shortcuts" aria-label="Project shortcuts">
+        <a class="project-badge" href="/projects/netsouls/">
+          <img
+            src="/assets/netsouls.png"
+            alt="Netsouls"
+            width="72" height="72" loading="lazy" decoding="async"
+          />
+        </a>
+
+        <a class="project-badge" href="/projects/vellum/">
+          <img
+            src="/assets/vellum.png"
+            alt="Vellum"
+            width="72" height="72" loading="lazy" decoding="async"
+          />
+          <span>Vellum</span>
+        </a>
+
+        <a class="project-badge" href="/projects/terminal-descent/">
+          <img
+            src="/assets/terminal.png"
+            alt="Terminal Descent"
+            width="72" height="72" loading="lazy" decoding="async"
+          />
+          <span>Terminal Descent</span>
+        </a>
       </nav>
     </div>
   </header>
 
   <!-- ====== Welcome / Hero Split ====== -->
-<section id="welcome" class="section hero-split">
-  <div class="hero-left">
-    <figure class="brand-lockup">
-      <img
-        src="/assets/main.png"
-        alt="Terminal Minds Logo"
-        width="200"
-        height="200"
-        loading="eager"
-        decoding="async"
-      />
-    </figure>
-  </div>
-
-  <div class="hero-right">
-    <h2>Welcome to our dev lab</h2>
-    <div class="content">
-      <p>We are a living portal for building and sharing Python-based games.</p>
-      <p>Minimal overhead, maximal expressiveness.</p>
-    <p>
-      We build in public: ship small, iterate fast, document the process, and keep it fun.
-      Pull up a chair, poke the projects, and if you enjoy the ride… keep the lab humming.
-    </p>
+  <section id="welcome" class="section hero-split">
+    <div class="hero-left">
+      <figure class="brand-lockup">
+        <img
+          src="/assets/main.png"
+          alt="Terminal Minds Logo"
+          width="200"
+          height="200"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
     </div>
-  </div>
-</section>
 
-  <!--section class="section">
-    <div class="content-narrow">
+    <div class="hero-right">
       <h2>Welcome to our dev lab</h2>
-      <p>We are a living portal for building and sharing Python-based games. Minimal overhead, maximal expressiveness.</p>
+      <div class="content">
+        <p>We are a living portal for building and sharing Python-based games.</p>
+        <p>Minimal overhead, maximal expressiveness.</p>
+      <p>
+        We build in public: ship small, iterate fast, document the process, and keep it fun.
+        Pull up a chair, poke the projects, and if you enjoy the ride… keep the lab humming.
+      </p>
+      </div>
     </div>
-  </section-->
+  </section>
 
   <section class="section" id="why-python">
     <h2>Why Python?</h2>
@@ -201,7 +216,6 @@ status ^= STUNNED; // flips stunned bit
     <h2>Contribute / Support</h2>
     <div class="content-narrow" id="contribute-content">
       <p>Bug reports and ideas welcome in <a id="discussion-link" href="https://github.com/erickdumi74/erickdumi74.github.io/discussions" target="_blank" rel="noopener">Discussions</a>.</p>
-      <p>Like the work? Small boosts keep the lab humming.</p>
       <p>Like the work? Keep the lab humming. Treat us to a coffee at: <a href="https://ko-fi.com/erickdumi74" target="_blank" rel="noopener">Ko‑fi</a>. <span class="tag"></span></p>
       <p class="tag">Thanks for keeping the lab great.</p></div>
   </section>

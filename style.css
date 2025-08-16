@@ -71,7 +71,7 @@ header.header--split .header-text{
 }
 
 header.header--split nav{
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent dark strip */
+  /*background: rgba(0, 0, 0, 0.6);  semi-transparent dark strip */
   display: inline-flex;
   gap: 16px;
   flex-wrap: wrap;
@@ -395,6 +395,43 @@ body:has(.lightbox:target){ overflow: hidden; }
   }
 }
 
+.project-shortcuts {
+    display: flex;
+    gap: clamp(.75rem, 2.5vw, 1.25rem);
+    flex-wrap: wrap;
+    align-items: center;
+    padding-block: 1rem 2rem;
+  }
+  .project-badge {
+    --ring: 0 0 0 0 rgba(0,0,0,0);
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .5rem .75rem;
+    border: 1px solid rgba(235, 228, 228, 0.08);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    box-shadow: var(--ring);
+    background: linear-gradient(180deg, rgba(18, 18, 19, 0.85), rgba(8, 8, 8, 0.85));
+    backdrop-filter: saturate(1.2) blur(2px);
+  }
+  .project-badge:hover {
+    transform: translateY(-1px);
+    border-color: rgba(0,0,0,.18);
+    box-shadow: 0 6px 16px rgba(0,0,0,.07);
+  }
+  .project-badge img {
+    display: block;
+    width: 72px; height: 72px;  /* keep small to avoid logo clash */
+    image-rendering: pixelated;  /* nice for your art style */
+    border-radius: 8px;
+  }
+  .project-badge span {
+    font-weight: 600;
+    letter-spacing: .2px;
+  }
+
 /* center logo */
 
 /* Make sure these run AFTER your other header rules */
@@ -440,6 +477,6 @@ body:has(.lightbox:target){ overflow: hidden; }
   }
 
   .hero-right .content {
-  padding-right: 0px;
-}
+    padding-right: 0px;
+  }
 }
