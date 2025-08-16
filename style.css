@@ -314,8 +314,9 @@ body:has(.lightbox:target){ overflow: hidden; }
 }
 
 /* Mobile: stack vertically but keep consistent logo size */
-@media (max-width: 720px){
+@media (max-width: 880px){
   header.header--split{
+    display: block;
     grid-template-columns: 1fr;
     row-gap: 10px;            /* vertical spacing when stacked */
     text-align: center;
@@ -371,4 +372,25 @@ body:has(.lightbox:target){ overflow: hidden; }
   margin-top:15px;
   contain: layout paint; /* <-- isolates layout & paint */
   isolation: isolate;    /* own stacking context */
+}
+
+/* Hero split */
+
+.hero-split {
+  display: flex;
+}
+
+.hero-left {
+  padding-top: 25px;   /* adjust the value until it looks right */
+}
+
+.hero-right .content {
+  padding-right: 25px;
+}
+
+/* Hero split */
+@media(max-width: 640px) {
+  .hero-split {
+    display: block;
+  }
 }
