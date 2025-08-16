@@ -492,3 +492,38 @@ body:has(.lightbox:target){ overflow: hidden; }
   content: "·";
   margin: 0 4px;
 }
+
+
+/* modal zoom on images */
+
+.icon-trigger img { cursor: zoom-in; }
+
+.icon-lightbox {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.9);
+  align-items: center; justify-content: center;
+  z-index: 9999;
+}
+.icon-lightbox:target { display: flex; }
+
+.icon-lightbox__figure {
+  position: relative;
+  max-width: 90vw; max-height: 90vh;
+}
+.icon-lightbox__figure img {
+  max-width: 100%; max-height: 100%;
+  border-radius: 8px;
+}
+
+.icon-lightbox__bg {
+  position: absolute; inset: 0;
+  text-indent: -9999px;
+}
+
+.icon-lightbox__close {
+  position: absolute; top: 12px; right: 20px;
+  width: 32px; height: 32px; line-height: 32px; text-align: center;
+  border-radius: 999px; background: rgba(0,0,0,.5); color: #fff;
+  text-decoration: none; font-size: 20px;
+}

@@ -24,9 +24,10 @@
 
   // About (supports multiple paragraphs)
   const about = document.getElementById('about-content');
-  const icon_image = document.getElementById('icon-image');
+  //const icon_image = document.getElementById('icon-image');
   if (game.about) {
-    icon_image.src = game.about.icon_image;
+    //icon_image.src = game.about.icon_image;
+    initIconModal(game);
     (game.about.intro || []).forEach(p => {
       const el = document.createElement('p');
       el.innerHTML = p;
@@ -188,9 +189,6 @@ function renderNotFound(game, data) {
   if (h1) h1.textContent = game.title;
   if (tag) tag.textContent = game.tagline;
 
-  // Add game image
-  const icon_image = document.getElementById('icon-image');
-
   // hide unwanted nav items
   document.getElementById('nav-play').style.display = 'none';
   document.getElementById('nav-logs').style.display = 'none';
@@ -226,8 +224,14 @@ function renderNotFound(game, data) {
 
     about.appendChild(np);
 
+    initIconModal(game);
+    /*
+    // Add game image
+    const icon_image = document.getElementById('icon-image');
+
     // set the image
     icon_image.src = game.icon_image;
+    */
 
     // set the correct discussion link
     const discussion_link = document.getElementById('discussion-link');
@@ -264,4 +268,34 @@ function setCanonical(href) {
   }
   link.setAttribute('href', href);
 }
+
+/* modal zoom on images */
+function initIconModal(game) {
+    const img = document.getElementById('icon-image');
+    if (!img || !game?.about.icon_image) return; // nothing to do
+
+    // set the hero image
+    img.src = game.about.icon_image;
+    img.alt = game.title || '';
+
+    // build the simple modal (hash + :target)
+    const boxId = 'icon-01';
+    const box = document.createElement('div');
+    box.className = 'icon-lightbox';
+    box.id = boxId;
+    box.innerHTML = `
+      <a class="icon-lightbox__bg" href="#" aria-label="Close"></a>
+      <figure class="icon-lightbox__figure">
+        <img src="${game.about.icon_image}" alt="${game.title || ''}">
+        <a class="icon-lightbox__close" href="#" aria-label="Close">×</a>
+      </figure>`;
+    document.body.appendChild(box);
+
+    // make the existing image open the modal
+    const wrap = document.createElement('a');
+    wrap.href = `#${boxId}`;
+    wrap.className = 'icon-trigger';
+    img.replaceWith(wrap);
+    wrap.appendChild(img);
+  }
 
