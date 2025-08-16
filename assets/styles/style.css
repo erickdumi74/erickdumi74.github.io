@@ -521,9 +521,35 @@ body:has(.lightbox:target){ overflow: hidden; }
   text-indent: -9999px;
 }
 
+/* unify close button style for screenshots + icon modals */
+/* make icon modal close button look like screenshot close button */
 .icon-lightbox__close {
-  position: absolute; top: 12px; right: 20px;
-  width: 32px; height: 32px; line-height: 32px; text-align: center;
-  border-radius: 999px; background: rgba(0,0,0,.5); color: #fff;
-  text-decoration: none; font-size: 20px;
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  line-height: 1;
+  font-size: 28px;
+  text-decoration: none;
+  color: var(--white);
+  background: rgba(0,0,0,0.5);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 6px 10px;
 }
+
+.icon-lightbox__close:hover {
+  background: var(--charcoal);
+  color: var(--green);
+  text-decoration: none;
+}
+
+@media (max-width: 880px) {
+  .lightbox__close, 
+  .lightbox__prev, 
+  .lightbox__next,
+  .icon-lightbox__close {      /* 👈 added */
+    font-size: 24px;
+    padding: 6px 8px;
+  }
+}
+

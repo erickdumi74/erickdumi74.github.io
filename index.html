@@ -121,15 +121,24 @@
   <section id="welcome" class="section hero-split">
     <div class="hero-left">
       <figure class="brand-lockup">
-        <img
-          src="/assets/images/games/main.png"
-          alt="Terminal Minds Logo"
-          width="200"
-          height="200"
-          loading="eager"
-          decoding="async"
-        />
+        <a href="#main-icon-lightbox" class="icon-trigger">
+          <img
+            src="/assets/images/games/main.png"
+            alt="Terminal Minds Logo"
+            width="200"
+            height="200"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
       </figure>
+      <div id="main-icon-lightbox" class="icon-lightbox" aria-modal="true" role="dialog">
+        <a href="#" class="icon-lightbox__bg" aria-label="Close"></a>
+        <figure class="icon-lightbox__figure">
+          <img src="/assets/images/games/main.png" alt="Terminal Minds Logo">
+          <a href="#" class="icon-lightbox__close" aria-label="Close">×</a>
+        </figure>
+      </div>
     </div>
 
     <div class="hero-right">
