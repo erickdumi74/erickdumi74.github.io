@@ -423,3 +423,19 @@ body:has(.lightbox:target){ overflow: hidden; }
     height: auto;
   }
 }
+
+@media (max-width: 640px) {
+  .hero-left .brand-lockup {
+    display: flex;              /* flex container */
+    justify-content: center;    /* centers child horizontally */
+  }
+
+  .hero-left .brand-lockup img {
+    margin: 0;                  /* kill any stray margins */
+    display: block;
+    max-width: 200px;           /* or whatever size you want */
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
