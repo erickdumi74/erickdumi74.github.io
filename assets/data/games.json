@@ -4,7 +4,7 @@
     "notfound": {
         "title": "Game Not Found",
         "tagline": "console: no match in archives",
-        "icon_image": "/assets/images/404.png",
+        "icon_image": "/assets/images/games/404.png",
         "intro": [
             "The console spits back a garbled error. The lab hums… but nothing happens.",
             "(Perhaps you mistyped? Or perhaps this game… doesn’t yet exist in your timeline.)"
@@ -96,7 +96,7 @@
       "tagline": "Gothic terminal puzzle game · In progress",
       "repo": "https://github.com/erickdumi74/vellum",
       "about": {
-        "icon_image": "/assets/images/vellum.png",
+        "icon_image": "/assets/images/games/vellum.png",
         "intro": [
           "Vellum is a narrative puzzle game with deep lore, modular verbs, and deliberate pacing. Built in Python to emphasize clarity and immersion."
         ],
@@ -173,7 +173,7 @@
       "tagline": "Minimalist moon‑lander · Skill over luck",
       "repo": "https://github.com/erickdumi74/terminal-descent",
       "about": {
-        "icon_image": "/assets/images/terminal.png",
+        "icon_image": "/assets/images/games/terminal.png",
         "intro": [
           "A tiny terminal lander: throttle, gravity, fuel. No fluff—just descent math and your nerves."
         ],
