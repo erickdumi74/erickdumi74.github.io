@@ -24,7 +24,9 @@
 
   // About (supports multiple paragraphs)
   const about = document.getElementById('about-content');
+  const icon_image = document.getElementById('icon-image');
   if (game.about) {
+    icon_image.src = game.about.icon_image;
     (game.about.intro || []).forEach(p => {
       const el = document.createElement('p');
       el.innerHTML = p;

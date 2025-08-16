@@ -18,6 +18,7 @@
       "tagline": "ASCII roguelike · Souls‑flavored combat",
       "repo": "https://github.com/erickdumi74/netsouls",
       "about": {
+        "icon_image": "../../assets/netsouls.png",
         "intro": [
           "<strong>Netsouls</strong> is a roguelike dungeon-crawler with a Soulslike heartbeat… and a potato for a hero.",
           "You are Sir Atarms, the noble (and suspiciously starchy) defender of the Drawer Realm. Armed with whatever pointy stick, rusty cleaver, or bent shield you can find, you descend into the depths where fallen echoes whisper and enemies do not politely take turns.",
@@ -94,6 +95,7 @@
       "tagline": "Gothic terminal puzzle game · In progress",
       "repo": "https://github.com/erickdumi74/vellum",
       "about": {
+        "icon_image": "../../assets/vellum.png",
         "intro": [
           "Vellum is a narrative puzzle game with deep lore, modular verbs, and deliberate pacing. Built in Python to emphasize clarity and immersion."
         ],
@@ -170,6 +172,7 @@
       "tagline": "Minimalist moon‑lander · Skill over luck",
       "repo": "https://github.com/erickdumi74/terminal-descent",
       "about": {
+        "icon_image": "../../assets/terminal.png",
         "intro": [
           "A tiny terminal lander: throttle, gravity, fuel. No fluff—just descent math and your nerves."
         ],
