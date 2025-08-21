@@ -165,12 +165,12 @@
         {"image":"/assets/vellum/screenshots/vel04.png", "alt":"Lab test prism activation.", "caption":"Lab - test prism activation."}
       ],
       "devlogs": [
-        "[WIP] Object‑oriented refactor: items_data per room; alias resolver overhaul.",
         "[WIP] Lore intensity: add more description to room items and interactions (take, poke, use, examine).",
-        "[WIP] Final puzzle design: final room mechanics, ethical fork, escape route, machine & lore integration.",
-        "[Planned] Structural refactor: Move each file to a directory for encapsulation and clarity.",
-        "[Planned] Public build notes and changelog snippets.",
-        "[Planned] Generate and upload terminal screen shots."
+        "[Planned] Final puzzle design: final room mechanics, ethical fork, escape route, machine & lore integration.",
+        "[Done] Structural refactor: Move each file to a directory for encapsulation and clarity.",
+        "[Done] Object‑oriented refactor: items_data per room; alias resolver overhaul.",
+        "[Done] Created Dev Diaries for updates.",
+        "[Done] Generate and upload terminal screen shots."
       ],
       "contribute": {
         "discussion_link": "https://github.com/erickdumi74/vellum/discussions"
